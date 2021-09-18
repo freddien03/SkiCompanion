@@ -13,8 +13,8 @@ struct SkiCompanionApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            SignUpView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

@@ -3,18 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30C626F337C200699485 /* SkiCompanionApp.swift */; };
-		7EDE30C926F337C200699485 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30C826F337C200699485 /* ContentView.swift */; };
 		7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CA26F337D100699485 /* Assets.xcassets */; };
 		7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CD26F337D100699485 /* Preview Assets.xcassets */; };
 		7EDE30D026F337D100699485 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30CF26F337D100699485 /* Persistence.swift */; };
 		7EDE30D326F337D100699485 /* SkiCompanion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */; };
 		7EDE30DE26F337D200699485 /* SkiCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30DD26F337D200699485 /* SkiCompanionTests.swift */; };
 		7EDE30E926F337D200699485 /* SkiCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30E826F337D200699485 /* SkiCompanionUITests.swift */; };
+		7EDE30FD26F4D51C00699485 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30FC26F4D51C00699485 /* RootTabView.swift */; };
+		7EDE310226F4D5FB00699485 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310126F4D5FB00699485 /* SessionView.swift */; };
+		7EDE310726F4D64A00699485 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310626F4D64A00699485 /* ResortView.swift */; };
+		7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310B26F4D68500699485 /* SignUpView.swift */; };
+		7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE312226F4DC3800699485 /* ProfileView.swift */; };
+		7EDE312B26F52AC100699485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE312A26F52ABF00699485 /* GoogleService-Info.plist */; };
+		7EDE313426F52D5900699485 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313326F52D5900699485 /* FirebaseFirestore */; };
+		7EDE313626F52D5900699485 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313526F52D5900699485 /* FirebaseDatabase */; };
+		7EDE313826F52D5900699485 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313726F52D5900699485 /* FirebaseFirestoreSwift-Beta */; };
+		7EDE313A26F52D5900699485 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313926F52D5900699485 /* FirebaseStorageSwift-Beta */; };
+		7EDE313C26F52D5900699485 /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313B26F52D5900699485 /* FirebaseDatabaseSwift-Beta */; };
+		7EDE313E26F52D5900699485 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313D26F52D5900699485 /* FirebaseStorage */; };
+		7EDE314026F52D5900699485 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313F26F52D5900699485 /* FirebaseAuth */; };
+		7EDE314226F52D5900699485 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE314126F52D5900699485 /* FirebaseMLModelDownloader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +50,6 @@
 /* Begin PBXFileReference section */
 		7EDE30C326F337C200699485 /* SkiCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDE30C626F337C200699485 /* SkiCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiCompanionApp.swift; sourceTree = "<group>"; };
-		7EDE30C826F337C200699485 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7EDE30CA26F337D100699485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EDE30CD26F337D100699485 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7EDE30CF26F337D100699485 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -49,6 +61,12 @@
 		7EDE30E426F337D200699485 /* SkiCompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkiCompanionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDE30E826F337D200699485 /* SkiCompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiCompanionUITests.swift; sourceTree = "<group>"; };
 		7EDE30EA26F337D200699485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EDE30FC26F4D51C00699485 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		7EDE310126F4D5FB00699485 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		7EDE310626F4D64A00699485 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
+		7EDE310B26F4D68500699485 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7EDE312226F4DC3800699485 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		7EDE312A26F52ABF00699485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDE313C26F52D5900699485 /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				7EDE313826F52D5900699485 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				7EDE313A26F52D5900699485 /* FirebaseStorageSwift-Beta in Frameworks */,
+				7EDE314226F52D5900699485 /* FirebaseMLModelDownloader in Frameworks */,
+				7EDE313626F52D5900699485 /* FirebaseDatabase in Frameworks */,
+				7EDE313426F52D5900699485 /* FirebaseFirestore in Frameworks */,
+				7EDE314026F52D5900699485 /* FirebaseAuth in Frameworks */,
+				7EDE313E26F52D5900699485 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +125,13 @@
 		7EDE30C526F337C200699485 /* SkiCompanion */ = {
 			isa = PBXGroup;
 			children = (
+				7EDE311026F4D69E00699485 /* Views */,
 				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
-				7EDE30C826F337C200699485 /* ContentView.swift */,
 				7EDE30CA26F337D100699485 /* Assets.xcassets */,
 				7EDE30CF26F337D100699485 /* Persistence.swift */,
 				7EDE30D426F337D100699485 /* Info.plist */,
 				7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */,
+				7EDE312A26F52ABF00699485 /* GoogleService-Info.plist */,
 				7EDE30CC26F337D100699485 /* Preview Content */,
 			);
 			path = SkiCompanion;
@@ -136,6 +163,18 @@
 			path = SkiCompanionUITests;
 			sourceTree = "<group>";
 		};
+		7EDE311026F4D69E00699485 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EDE310126F4D5FB00699485 /* SessionView.swift */,
+				7EDE312226F4DC3800699485 /* ProfileView.swift */,
+				7EDE310626F4D64A00699485 /* ResortView.swift */,
+				7EDE310B26F4D68500699485 /* SignUpView.swift */,
+				7EDE30FC26F4D51C00699485 /* RootTabView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +191,16 @@
 			dependencies = (
 			);
 			name = SkiCompanion;
+			packageProductDependencies = (
+				7EDE313326F52D5900699485 /* FirebaseFirestore */,
+				7EDE313526F52D5900699485 /* FirebaseDatabase */,
+				7EDE313726F52D5900699485 /* FirebaseFirestoreSwift-Beta */,
+				7EDE313926F52D5900699485 /* FirebaseStorageSwift-Beta */,
+				7EDE313B26F52D5900699485 /* FirebaseDatabaseSwift-Beta */,
+				7EDE313D26F52D5900699485 /* FirebaseStorage */,
+				7EDE313F26F52D5900699485 /* FirebaseAuth */,
+				7EDE314126F52D5900699485 /* FirebaseMLModelDownloader */,
+			);
 			productName = SkiCompanion;
 			productReference = 7EDE30C326F337C200699485 /* SkiCompanion.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +272,9 @@
 				Base,
 			);
 			mainGroup = 7EDE30BA26F337C200699485;
+			packageReferences = (
+				7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 7EDE30C426F337C200699485 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -241,6 +293,7 @@
 			files = (
 				7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */,
 				7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */,
+				7EDE312B26F52AC100699485 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +319,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EDE30D326F337D100699485 /* SkiCompanion.xcdatamodeld in Sources */,
+				7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */,
+				7EDE310226F4D5FB00699485 /* SessionView.swift in Sources */,
+				7EDE30FD26F4D51C00699485 /* RootTabView.swift in Sources */,
+				7EDE310726F4D64A00699485 /* ResortView.swift in Sources */,
+				7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */,
 				7EDE30D026F337D100699485 /* Persistence.swift in Sources */,
-				7EDE30C926F337C200699485 /* ContentView.swift in Sources */,
 				7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +639,60 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7EDE313326F52D5900699485 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7EDE313526F52D5900699485 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		7EDE313726F52D5900699485 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		7EDE313926F52D5900699485 /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+		7EDE313B26F52D5900699485 /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+		7EDE313D26F52D5900699485 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		7EDE313F26F52D5900699485 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7EDE314126F52D5900699485 /* FirebaseMLModelDownloader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EDE313226F52D5800699485 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMLModelDownloader;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */ = {
