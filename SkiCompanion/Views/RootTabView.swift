@@ -10,6 +10,10 @@ import SwiftUI
 struct RootTabView: View {
     var body: some View {
         TabView {
+            WeatherView()
+                .tabItem {
+                    Image(systemName: "cloud.sun")
+                }
             SessionView()
                 .tabItem {
                     Text("Start Session")

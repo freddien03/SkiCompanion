@@ -11,11 +11,9 @@ struct SignUpView: View {
     var body: some View {
         NavigationView {
             VStack{
-                NavigationLink(destination: ProfileView()) {
+                NavigationLink(destination: RootTabView()) {
                     Text("Sign Up")
                 }
-                TabItem()
-                    .frame(maxHeight: .infinity, alignment: .bottom)
             }
         }
     }

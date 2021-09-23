@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E535D3826F8940E004C3B2E /* WeatherView.swift */; };
 		7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30C626F337C200699485 /* SkiCompanionApp.swift */; };
 		7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CA26F337D100699485 /* Assets.xcassets */; };
 		7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CD26F337D100699485 /* Preview Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		7EDE310726F4D64A00699485 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310626F4D64A00699485 /* ResortView.swift */; };
 		7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310B26F4D68500699485 /* SignUpView.swift */; };
 		7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE312226F4DC3800699485 /* ProfileView.swift */; };
-		7EDE312B26F52AC100699485 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE312A26F52ABF00699485 /* GoogleService-Info.plist */; };
 		7EDE313426F52D5900699485 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313326F52D5900699485 /* FirebaseFirestore */; };
 		7EDE313626F52D5900699485 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313526F52D5900699485 /* FirebaseDatabase */; };
 		7EDE313826F52D5900699485 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 7EDE313726F52D5900699485 /* FirebaseFirestoreSwift-Beta */; };
@@ -48,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E535D3826F8940E004C3B2E /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		7EDE30C326F337C200699485 /* SkiCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDE30C626F337C200699485 /* SkiCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiCompanionApp.swift; sourceTree = "<group>"; };
 		7EDE30CA26F337D100699485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		7EDE310626F4D64A00699485 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		7EDE310B26F4D68500699485 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7EDE312226F4DC3800699485 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		7EDE312A26F52ABF00699485 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,6 @@
 				7EDE30CF26F337D100699485 /* Persistence.swift */,
 				7EDE30D426F337D100699485 /* Info.plist */,
 				7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */,
-				7EDE312A26F52ABF00699485 /* GoogleService-Info.plist */,
 				7EDE30CC26F337D100699485 /* Preview Content */,
 			);
 			path = SkiCompanion;
@@ -167,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				7EDE310126F4D5FB00699485 /* SessionView.swift */,
+				7E535D3826F8940E004C3B2E /* WeatherView.swift */,
 				7EDE312226F4DC3800699485 /* ProfileView.swift */,
 				7EDE310626F4D64A00699485 /* ResortView.swift */,
 				7EDE310B26F4D68500699485 /* SignUpView.swift */,
@@ -293,7 +293,6 @@
 			files = (
 				7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */,
 				7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */,
-				7EDE312B26F52AC100699485 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +323,7 @@
 				7EDE30FD26F4D51C00699485 /* RootTabView.swift in Sources */,
 				7EDE310726F4D64A00699485 /* ResortView.swift in Sources */,
 				7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */,
+				7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */,
 				7EDE30D026F337D100699485 /* Persistence.swift in Sources */,
 				7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */,
 			);
