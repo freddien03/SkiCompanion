@@ -8,14 +8,10 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @State private var loggedIn = false
     var body: some View {
-        NavigationView {
-            VStack{
-                NavigationLink(destination: RootTabView()) {
-                    Text("Sign Up")
-                }
-            }
-        }
+        Button("signup", action: { loggedIn.toggle() })
+            .navigate(to: RootTabView(), when: $loggedIn)
     }
 }
 

@@ -9,23 +9,44 @@ import SwiftUI
 
 struct RootTabView: View {
     var body: some View {
-        TabView {
-            WeatherView()
-                .tabItem {
-                    Image(systemName: "cloud.sun")
-                }
-            SessionView()
-                .tabItem {
-                    Text("Start Session")
-                }
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person.fill")
-                }
-            ResortView()
-                .tabItem {
-                    Text("Change Resort")
-                }
+        NavigationView{
+            TabView {
+                ResortView()
+                    .tabItem {
+                        Image(systemName: "house")
+                    }
+                AchievementsView()
+                    .tabItem {
+                        VStack{
+                            Image(systemName: "star.circle")
+                            Text("Achievements")
+                        }
+                    }
+                SessionView()
+                    .tabItem {
+                        VStack{
+                            Image(systemName: "plus.viewfinder")
+                            Text("Start Session")
+                                .bold()
+                        }
+                    }
+                WeatherView()
+                    .tabItem {
+                        VStack{
+                            Image(systemName: "cloud.sun")
+                            Text("weather")
+                        }
+                    }
+                ProfileView()
+                    .tabItem {
+                        VStack{
+                            Image(systemName: "person.fill")
+                            Text("Profile")
+                        }
+                    }
+            }
+            .navigationBarTitle("Ski App")
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
