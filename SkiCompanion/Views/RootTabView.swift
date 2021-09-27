@@ -14,6 +14,7 @@ struct RootTabView: View {
                 ResortView()
                     .tabItem {
                         Image(systemName: "house")
+                        Text("Home")
                     }
                 AchievementsView()
                     .tabItem {
@@ -45,7 +46,7 @@ struct RootTabView: View {
                         }
                     }
             }
-            .navigationBarTitle("Ski App")
+            .navigationBarTitle("Ski App", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
         }
     }
