@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct AchievementsView: View {
+    @EnvironmentObject var state: StateController
     var body: some View {
-        Text("Achievements")
+        List {
+            ForEach(state.currentUser.achievements, id: \.id) { achievement in
+                HStack{
+                    Text(achievement.name)
+                }
+            }
+        }
     }
 }
 
