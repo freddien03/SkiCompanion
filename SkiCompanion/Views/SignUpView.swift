@@ -6,28 +6,36 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignUpView: View {
+    @State var username: String = ""
+    @State var password: String = ""
     @EnvironmentObject var state: StateController
-    @State private var logIn = false
-    @State private var username: String = ""
-    @State private var password: String = ""
+    @State private var loggedIn = false
     var body: some View {
-        NavigationView{
-            VStack{
-                NavigationLink(destination: RootTabView()) {
-                    Text("Sign Up")
-                }
-                Spacer()
-                NavigationLink(destination: LoginView()) {
-                    Text("Login")
+        VStack{
+            Text("Login").font(.system(size: 64, weight: .semibold)).foregroundColor(.white)
+            HStack{
+                Image(systemName: "envelope").foregroundColor(.gray)
+                TextField("Email", text: $username)
+            }
+            HStack{
+                Image(systemName: "lock").foregroundColor(.gray)
+                SecureField("Password", text: $password)
+            }
+            Button("Create Account"){
+                Auth.auth().createUser(withEmail: username, password: password) { (result, error) in
+                    if let error = error{
+                        print(error.localizedDescription)
+                    } else {
+                        print("Success")
+                        loggedIn.toggle()
+                    }
                 }
             }
-//        TextField(
-//            "User name",
-//            text: $username
-//        )
         }
+        .navigate(to: RootTabView(), when: $loggedIn)
     }
 }
 

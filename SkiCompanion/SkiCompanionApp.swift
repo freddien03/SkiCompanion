@@ -6,16 +6,25 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct SkiCompanionApp: App {
+  @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
     let persistenceController = PersistenceController.shared
-
-    var body: some Scene {
-        WindowGroup {
-            SignUpView()
-                .environmentObject(StateController(currentResort: "Verbier", currentUser: User(username: "admin", password: "admin", currentResort: "Verbier", achievements: [Achievement(name: "Novice Distance", type: "km", goal: 100), Achievement(name: "Novice Speed", type: "mph", goal: 30)])))
-//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-        }
+  var body: some Scene {
+    WindowGroup {
+      SignUpView()
+        .environmentObject(StateController(currentResort: "Verbier", currentUser: User(username: "admin", password: "admin", currentResort: "Verbier", achievements: [Achievement(name: "Novice Distance", type: "km", goal: 100), Achievement(name: "Novice Speed", type: "mph", goal: 30)])))
     }
+  }
 }
+ 
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+    return true
+  }
+}
+
+
