@@ -13,11 +13,11 @@ class StateController: ObservableObject {
     var lastKnownLocation: String = ""
     var currentResort: String
     var currentUser: User
+    var loggedIn = false
     
-    init() {
+    init(currentResort: String, currentUser: User) {
         self.currentResort = "Verbier"
-        self.currentUser = User(username: "admin", password: "admin", currentResort: self.currentResort)
-        self.currentUser.achievements = [Achievement(name: "novice distance", type: "distance", goal: 100), Achievement(name: "novice speed", type: "speed", goal: 30)]
+        self.currentUser = currentUser
     }
     
 }

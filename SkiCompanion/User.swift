@@ -14,10 +14,11 @@ class User {
     var achievements: [Achievement] = []
     var currrentResort: String
     
-    init(username: String, password: String, currentResort: String) {
+    init(username: String, password: String, currentResort: String, achievements: [Achievement]) {
         self.username = username
         self.password = password
         self.currrentResort = currentResort
+        self.achievements = achievements
     }
     
     func authenticate(user: String, pass: String) -> Bool{

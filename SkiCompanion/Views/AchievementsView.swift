@@ -14,6 +14,9 @@ struct AchievementsView: View {
             ForEach(state.currentUser.achievements, id: \.id) { achievement in
                 HStack{
                     Text(achievement.name)
+                    Spacer()
+                    Text(String(achievement.progress)+"/"+String(achievement.goal))
+                    Text(achievement.type)
                 }
             }
         }

@@ -46,9 +46,9 @@ struct RootTabView: View {
                         }
                     }
             }
-            .navigationBarTitle("Ski App", displayMode: .inline)
-            .navigationBarBackButtonHidden(true)
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle("Ski App", displayMode: .inline)
     }
 }
 

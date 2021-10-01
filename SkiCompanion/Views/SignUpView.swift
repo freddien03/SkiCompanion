@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var loggedIn = false
+    @EnvironmentObject var state: StateController
+    @State private var logIn = false
+    @State private var username: String = ""
+    @State private var password: String = ""
     var body: some View {
-        Button("signup", action: { loggedIn.toggle() })
-            .navigate(to: RootTabView(), when: $loggedIn)
+        NavigationView{
+            VStack{
+                NavigationLink(destination: RootTabView()) {
+                    Text("Sign Up")
+                }
+                Spacer()
+                NavigationLink(destination: LoginView()) {
+                    Text("Login")
+                }
+            }
+//        TextField(
+//            "User name",
+//            text: $username
+//        )
+        }
     }
 }
 

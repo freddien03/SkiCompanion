@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		246C00CDA6A16BD255AEE046 /* Pods_SkiCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15063D6557191422F370103D /* Pods_SkiCompanion.framework */; };
 		7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E535D3826F8940E004C3B2E /* WeatherView.swift */; };
 		7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30C626F337C200699485 /* SkiCompanionApp.swift */; };
 		7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CA26F337D100699485 /* Assets.xcassets */; };
@@ -20,13 +21,17 @@
 		7EDE310726F4D64A00699485 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310626F4D64A00699485 /* ResortView.swift */; };
 		7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310B26F4D68500699485 /* SignUpView.swift */; };
 		7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE312226F4DC3800699485 /* ProfileView.swift */; };
+		9FAB3DDEF554753F35C66595 /* Pods_SkiCompanion_SkiCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */; };
 		C6352D0B26FC715E004336E1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D0A26FC715E004336E1 /* View.swift */; };
 		C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D1226FC739E004336E1 /* AchievementsView.swift */; };
+		C642C6D0270748E100282D7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C642C6CF270748E100282D7D /* GoogleService-Info.plist */; };
+		C642C6D527074A2400282D7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C642C6D427074A2400282D7D /* LoginView.swift */; };
 		C66915222705A6B1003FD294 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915212705A6B1003FD294 /* Achievement.swift */; };
 		C66915272705A79A003FD294 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915262705A79A003FD294 /* Session.swift */; };
 		C669152C2705A8D1003FD294 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C669152B2705A8D1003FD294 /* User.swift */; };
 		C66915312705AA6C003FD294 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915302705AA6C003FD294 /* StateController.swift */; };
 		C66915362705AB32003FD294 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915352705AB32003FD294 /* LocationHandler.swift */; };
+		D6E28D959058227FE8FBB8B7 /* Pods_SkiCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06BD721CFFDA94B536B129AC /* Pods-SkiCompanion-SkiCompanionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion-SkiCompanionUITests.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanion-SkiCompanionUITests/Pods-SkiCompanion-SkiCompanionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		15063D6557191422F370103D /* Pods_SkiCompanion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C20F4C5AADAFE83514E6A3 /* Pods-SkiCompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion.release.xcconfig"; path = "Target Support Files/Pods-SkiCompanion/Pods-SkiCompanion.release.xcconfig"; sourceTree = "<group>"; };
+		39F7AF58422AE9CE94ECC344 /* Pods-SkiCompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanionTests.release.xcconfig"; path = "Target Support Files/Pods-SkiCompanionTests/Pods-SkiCompanionTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E535D3826F8940E004C3B2E /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		7EDE30C326F337C200699485 /* SkiCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDE30C626F337C200699485 /* SkiCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiCompanionApp.swift; sourceTree = "<group>"; };
@@ -66,13 +75,20 @@
 		7EDE310626F4D64A00699485 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		7EDE310B26F4D68500699485 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7EDE312226F4DC3800699485 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A5A9427313892C33A447644E /* Pods-SkiCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanion/Pods-SkiCompanion.debug.xcconfig"; sourceTree = "<group>"; };
 		C6352D0A26FC715E004336E1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C6352D1226FC739E004336E1 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
+		C642C6CF270748E100282D7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C642C6D427074A2400282D7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C66915212705A6B1003FD294 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		C66915262705A79A003FD294 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C669152B2705A8D1003FD294 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C66915302705AA6C003FD294 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		C66915352705AB32003FD294 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanion_SkiCompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanionTests/Pods-SkiCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2BB26A43193682B1FD9B23B /* Pods-SkiCompanion-SkiCompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion-SkiCompanionUITests.release.xcconfig"; path = "Target Support Files/Pods-SkiCompanion-SkiCompanionUITests/Pods-SkiCompanion-SkiCompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246C00CDA6A16BD255AEE046 /* Pods_SkiCompanion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E28D959058227FE8FBB8B7 /* Pods_SkiCompanionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,12 +112,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FAB3DDEF554753F35C66595 /* Pods_SkiCompanion_SkiCompanionUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		315D3153AF5B168A4528280B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15063D6557191422F370103D /* Pods_SkiCompanion.framework */,
+				CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */,
+				D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EDE30BA26F337C200699485 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +136,8 @@
 				7EDE30DC26F337D200699485 /* SkiCompanionTests */,
 				7EDE30E726F337D200699485 /* SkiCompanionUITests */,
 				7EDE30C426F337C200699485 /* Products */,
+				834D214961736E1B82413E0F /* Pods */,
+				315D3153AF5B168A4528280B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,15 +156,16 @@
 			children = (
 				C6352D0926FC7147004336E1 /* Extensions */,
 				7EDE311026F4D69E00699485 /* Views */,
-				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
-				C66915212705A6B1003FD294 /* Achievement.swift */,
-				C66915262705A79A003FD294 /* Session.swift */,
-				C669152B2705A8D1003FD294 /* User.swift */,
 				C66915302705AA6C003FD294 /* StateController.swift */,
+				C66915262705A79A003FD294 /* Session.swift */,
 				C66915352705AB32003FD294 /* LocationHandler.swift */,
+				C669152B2705A8D1003FD294 /* User.swift */,
+				C66915212705A6B1003FD294 /* Achievement.swift */,
+				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
 				7EDE30CA26F337D100699485 /* Assets.xcassets */,
 				7EDE30CF26F337D100699485 /* Persistence.swift */,
 				7EDE30D426F337D100699485 /* Info.plist */,
+				C642C6CF270748E100282D7D /* GoogleService-Info.plist */,
 				7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */,
 				7EDE30CC26F337D100699485 /* Preview Content */,
 			);
@@ -170,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				7EDE310126F4D5FB00699485 /* SessionView.swift */,
+				C642C6D427074A2400282D7D /* LoginView.swift */,
 				7E535D3826F8940E004C3B2E /* WeatherView.swift */,
 				7EDE312226F4DC3800699485 /* ProfileView.swift */,
 				7EDE310626F4D64A00699485 /* ResortView.swift */,
@@ -178,6 +211,20 @@
 				C6352D1226FC739E004336E1 /* AchievementsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		834D214961736E1B82413E0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5A9427313892C33A447644E /* Pods-SkiCompanion.debug.xcconfig */,
+				32C20F4C5AADAFE83514E6A3 /* Pods-SkiCompanion.release.xcconfig */,
+				06BD721CFFDA94B536B129AC /* Pods-SkiCompanion-SkiCompanionUITests.debug.xcconfig */,
+				F2BB26A43193682B1FD9B23B /* Pods-SkiCompanion-SkiCompanionUITests.release.xcconfig */,
+				D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */,
+				39F7AF58422AE9CE94ECC344 /* Pods-SkiCompanionTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		C6352D0926FC7147004336E1 /* Extensions */ = {
@@ -195,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EDE30ED26F337D200699485 /* Build configuration list for PBXNativeTarget "SkiCompanion" */;
 			buildPhases = (
+				E9A09E630E8876E698191829 /* [CP] Check Pods Manifest.lock */,
 				7EDE30BF26F337C200699485 /* Sources */,
 				7EDE30C026F337C200699485 /* Frameworks */,
 				7EDE30C126F337C200699485 /* Resources */,
@@ -204,8 +252,6 @@
 			dependencies = (
 			);
 			name = SkiCompanion;
-			packageProductDependencies = (
-			);
 			productName = SkiCompanion;
 			productReference = 7EDE30C326F337C200699485 /* SkiCompanion.app */;
 			productType = "com.apple.product-type.application";
@@ -214,6 +260,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EDE30F026F337D200699485 /* Build configuration list for PBXNativeTarget "SkiCompanionTests" */;
 			buildPhases = (
+				8DFBA95CB88DD416C504933A /* [CP] Check Pods Manifest.lock */,
 				7EDE30D526F337D200699485 /* Sources */,
 				7EDE30D626F337D200699485 /* Frameworks */,
 				7EDE30D726F337D200699485 /* Resources */,
@@ -232,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EDE30F326F337D200699485 /* Build configuration list for PBXNativeTarget "SkiCompanionUITests" */;
 			buildPhases = (
+				9A66DAC1DCE8D0C96456834F /* [CP] Check Pods Manifest.lock */,
 				7EDE30E026F337D200699485 /* Sources */,
 				7EDE30E126F337D200699485 /* Frameworks */,
 				7EDE30E226F337D200699485 /* Resources */,
@@ -277,8 +325,6 @@
 				Base,
 			);
 			mainGroup = 7EDE30BA26F337C200699485;
-			packageReferences = (
-			);
 			productRefGroup = 7EDE30C426F337C200699485 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,6 +343,7 @@
 			files = (
 				7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */,
 				7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */,
+				C642C6D0270748E100282D7D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +363,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8DFBA95CB88DD416C504933A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkiCompanionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A66DAC1DCE8D0C96456834F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkiCompanion-SkiCompanionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9A09E630E8876E698191829 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SkiCompanion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7EDE30BF26F337C200699485 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,6 +447,7 @@
 				C66915362705AB32003FD294 /* LocationHandler.swift in Sources */,
 				C669152C2705A8D1003FD294 /* User.swift in Sources */,
 				7EDE310726F4D64A00699485 /* ResortView.swift in Sources */,
+				C642C6D527074A2400282D7D /* LoginView.swift in Sources */,
 				C66915272705A79A003FD294 /* Session.swift in Sources */,
 				7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */,
 				7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */,
@@ -490,6 +607,7 @@
 		};
 		7EDE30EE26F337D200699485 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5A9427313892C33A447644E /* Pods-SkiCompanion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -511,6 +629,7 @@
 		};
 		7EDE30EF26F337D200699485 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32C20F4C5AADAFE83514E6A3 /* Pods-SkiCompanion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -532,6 +651,7 @@
 		};
 		7EDE30F126F337D200699485 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -553,6 +673,7 @@
 		};
 		7EDE30F226F337D200699485 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39F7AF58422AE9CE94ECC344 /* Pods-SkiCompanionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -574,6 +695,7 @@
 		};
 		7EDE30F426F337D200699485 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06BD721CFFDA94B536B129AC /* Pods-SkiCompanion-SkiCompanionUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -593,6 +715,7 @@
 		};
 		7EDE30F526F337D200699485 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2BB26A43193682B1FD9B23B /* Pods-SkiCompanion-SkiCompanionUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
