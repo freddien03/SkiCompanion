@@ -29,4 +29,16 @@ class User {
         }
     }
     
+    func daysSkiing() {
+        if self.sessions.count != 0{
+            let fromDate = startOfDay(for: sessions[0])
+            let toDate = startOfDay(for: to)
+            let numberOfDays = dateComponents([.day], from: fromDate, to: toDate)
+                    
+                    return numberOfDays.day! + 1 // <1>
+        }else{
+            return 0
+        }
+    }
+    
 }

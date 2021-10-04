@@ -18,7 +18,6 @@ extension View {
 
                 NavigationLink(
                     destination: view
-                        .navigationBarTitle("")
                         .navigationBarHidden(true),
                     isActive: binding
                 ) {

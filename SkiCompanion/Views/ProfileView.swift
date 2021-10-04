@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var state: StateController
     var body: some View {
-        NavigationView{
-            Text("Profile")
-        }.navigationBarBackButtonHidden(true)
-        .navigationTitle("Ski App")
+        VStack{
+            Text(state.currentUser.username + "'s Profile")
+                .padding()
+            Text("Current Resort: "+state.currentResort)
+            Text("Days Skiing: ")
+        }
     }
 }
 

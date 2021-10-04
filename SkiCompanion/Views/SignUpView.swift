@@ -15,10 +15,12 @@ struct SignUpView: View {
     @State private var loggedIn = false
     var body: some View {
         VStack{
-            Text("Login").font(.system(size: 64, weight: .semibold)).foregroundColor(.white)
+            Text("Sign Up")
+                .font(.system(size: 30, weight: .semibold))
             HStack{
                 Image(systemName: "envelope").foregroundColor(.gray)
                 TextField("Email", text: $username)
+                    .disableAutocorrection(true)
             }
             HStack{
                 Image(systemName: "lock").foregroundColor(.gray)
@@ -34,6 +36,11 @@ struct SignUpView: View {
                     }
                 }
             }
+            .padding()
+            NavigationLink(destination: LoginView()) {
+                Text("Log In")
+            }
+            .padding()
         }
         .navigate(to: RootTabView(), when: $loggedIn)
     }
