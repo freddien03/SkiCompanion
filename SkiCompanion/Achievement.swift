@@ -22,6 +22,7 @@ class Achievement {
         self.goal = goal
     }
     
+    // mark the achievement as completed when goal is reached
     func checkComplete() -> Bool {
         if progress >= goal{
             isComplete = true
