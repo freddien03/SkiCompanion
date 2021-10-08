@@ -6,23 +6,29 @@
 //
 
 import Foundation
+import Firebase
 
 class User {
-    let username: String
+    let email: String
     let password: String
     var sessions: [Session] = []
     var achievements: [Achievement] = []
     var currrentResort: String
     
-    init(username: String, password: String, currentResort: String, achievements: [Achievement]) {
-        self.username = username
+    init(email: String, password: String, currentResort: String, achievements: [Achievement]) {
+        self.email = email
         self.password = password
         self.currrentResort = currentResort
         self.achievements = achievements
     }
     
-    func authenticate(user: String, pass: String) -> Bool{
-        if username == user && pass == password {
+    func username() -> String{
+        let emailList = email.split(separator: "@")
+        return String(emailList[0])
+    }
+    
+    func authenticate(email: String, pass: String) -> Bool{
+        if email == self.email && pass == self.password {
             return true
         }else{
             return false

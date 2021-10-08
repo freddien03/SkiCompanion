@@ -11,8 +11,8 @@ class Achievement {
     
     let name: String
     let type: String
+    let id = UUID()
     let goal: Int
-    var id = UUID()
     var progress: Int = 0
     var isComplete: Bool = false
     

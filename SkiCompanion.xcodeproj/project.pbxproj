@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,6 @@
 		7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30C626F337C200699485 /* SkiCompanionApp.swift */; };
 		7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CA26F337D100699485 /* Assets.xcassets */; };
 		7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CD26F337D100699485 /* Preview Assets.xcassets */; };
-		7EDE30D026F337D100699485 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30CF26F337D100699485 /* Persistence.swift */; };
-		7EDE30D326F337D100699485 /* SkiCompanion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */; };
 		7EDE30DE26F337D200699485 /* SkiCompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30DD26F337D200699485 /* SkiCompanionTests.swift */; };
 		7EDE30E926F337D200699485 /* SkiCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30E826F337D200699485 /* SkiCompanionUITests.swift */; };
 		7EDE30FD26F4D51C00699485 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30FC26F4D51C00699485 /* RootTabView.swift */; };
@@ -22,6 +20,7 @@
 		7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310B26F4D68500699485 /* SignUpView.swift */; };
 		7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE312226F4DC3800699485 /* ProfileView.swift */; };
 		9FAB3DDEF554753F35C66595 /* Pods_SkiCompanion_SkiCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */; };
+		C62D1540271087CF009A58B9 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D153F271087CF009A58B9 /* Auth.swift */; };
 		C6352D0B26FC715E004336E1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D0A26FC715E004336E1 /* View.swift */; };
 		C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D1226FC739E004336E1 /* AchievementsView.swift */; };
 		C642C6D0270748E100282D7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C642C6CF270748E100282D7D /* GoogleService-Info.plist */; };
@@ -61,8 +60,6 @@
 		7EDE30C626F337C200699485 /* SkiCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiCompanionApp.swift; sourceTree = "<group>"; };
 		7EDE30CA26F337D100699485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EDE30CD26F337D100699485 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7EDE30CF26F337D100699485 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		7EDE30D226F337D100699485 /* SkiCompanion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SkiCompanion.xcdatamodel; sourceTree = "<group>"; };
 		7EDE30D426F337D100699485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EDE30D926F337D200699485 /* SkiCompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkiCompanionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDE30DD26F337D200699485 /* SkiCompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiCompanionTests.swift; sourceTree = "<group>"; };
@@ -76,6 +73,7 @@
 		7EDE310B26F4D68500699485 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7EDE312226F4DC3800699485 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A5A9427313892C33A447644E /* Pods-SkiCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanion/Pods-SkiCompanion.debug.xcconfig"; sourceTree = "<group>"; };
+		C62D153F271087CF009A58B9 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		C6352D0A26FC715E004336E1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C6352D1226FC739E004336E1 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		C642C6CF270748E100282D7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -163,10 +161,8 @@
 				C66915212705A6B1003FD294 /* Achievement.swift */,
 				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
 				7EDE30CA26F337D100699485 /* Assets.xcassets */,
-				7EDE30CF26F337D100699485 /* Persistence.swift */,
 				7EDE30D426F337D100699485 /* Info.plist */,
 				C642C6CF270748E100282D7D /* GoogleService-Info.plist */,
-				7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */,
 				7EDE30CC26F337D100699485 /* Preview Content */,
 			);
 			path = SkiCompanion;
@@ -223,7 +219,6 @@
 				D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */,
 				39F7AF58422AE9CE94ECC344 /* Pods-SkiCompanionTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -231,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				C6352D0A26FC715E004336E1 /* View.swift */,
+				C62D153F271087CF009A58B9 /* Auth.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -473,7 +469,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EDE30D326F337D100699485 /* SkiCompanion.xcdatamodeld in Sources */,
 				7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */,
 				C6352D0B26FC715E004336E1 /* View.swift in Sources */,
 				7EDE310226F4D5FB00699485 /* SessionView.swift in Sources */,
@@ -487,9 +482,9 @@
 				C66915272705A79A003FD294 /* Session.swift in Sources */,
 				7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */,
 				7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */,
-				7EDE30D026F337D100699485 /* Persistence.swift in Sources */,
 				C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */,
 				7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */,
+				C62D1540271087CF009A58B9 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -809,19 +804,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		7EDE30D126F337D100699485 /* SkiCompanion.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				7EDE30D226F337D100699485 /* SkiCompanion.xcdatamodel */,
-			);
-			currentVersion = 7EDE30D226F337D100699485 /* SkiCompanion.xcdatamodel */;
-			path = SkiCompanion.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 7EDE30BB26F337C200699485 /* Project object */;
 }

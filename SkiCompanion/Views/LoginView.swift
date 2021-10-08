@@ -27,7 +27,7 @@ struct LoginView: View {
                 SecureField("Password", text: $password)
             }
             Button("Log In") {
-                Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
                     if error != nil {
                         print(error?.localizedDescription ?? "")
                     } else {

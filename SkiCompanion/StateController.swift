@@ -16,7 +16,7 @@ class StateController: ObservableObject {
     var loggedIn = false
     
     init(currentResort: String, currentUser: User) {
-        self.currentResort = "Verbier"
+        self.currentResort = currentResort
         self.currentUser = currentUser
     }
     

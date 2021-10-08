@@ -11,11 +11,10 @@ import Firebase
 @main
 struct SkiCompanionApp: App {
   @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
-    let persistenceController = PersistenceController.shared
   var body: some Scene {
     WindowGroup {
       RootTabView()
-        .environmentObject(StateController(currentResort: "Verbier", currentUser: User(username: "admin", password: "admin", currentResort: "Verbier", achievements: [Achievement(name: "Novice Distance", type: "km", goal: 100), Achievement(name: "Novice Speed", type: "mph", goal: 30)])))
+        .environmentObject(StateController(currentResort: "Verbier", currentUser: User(email: "admin@admin.com", password: "admin", currentResort: "Verbier", achievements: [Achievement(name: "Novice Distance", type: "km", goal: 100), Achievement(name: "Novice Speed", type: "mph", goal: 30)])))
     }
   }
 }

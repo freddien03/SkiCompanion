@@ -11,7 +11,7 @@ struct ProfileView: View {
     @EnvironmentObject var state: StateController
     var body: some View {
         VStack{
-            Text(state.currentUser.username + "'s Profile")
+            Text(state.currentUser.username() + "'s Profile")
                 .padding()
             Text("Current Resort: "+state.currentResort)
             Text("Days Skiing: ")
