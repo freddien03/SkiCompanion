@@ -33,6 +33,7 @@ struct LoginView: View {
                     } else {
                         print("success")
                         success = true
+                        state.UserID = Auth.auth().currentUser?.uid ?? ""
                     }
                 }
             }

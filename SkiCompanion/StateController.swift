@@ -13,7 +13,11 @@ class StateController: ObservableObject {
     var lastKnownLocation: String = ""
     var currentResort: String
     var currentUser: User
-    var loggedIn = false
+    var UserID: String = "" {
+        didSet {
+            print(UserID)
+        }
+    }
     
     init(currentResort: String, currentUser: User) {
         self.currentResort = currentResort
