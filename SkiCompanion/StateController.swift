@@ -16,8 +16,7 @@ class StateController: ObservableObject {
     var currentUser: User
     var UserID: String = "" {
         didSet {
-            print(UserID)
-            print(fetchUser(ID: UserID))
+            fetchUser(ID: UserID)
         }
     }
     
@@ -26,8 +25,15 @@ class StateController: ObservableObject {
         self.currentUser = currentUser
     }
     
+    func createUser(data: Dictionary<String, Any>) -> User {
+        let email: String = data["email"] as! String
+        let password: String = data["password"] as! String
+        let currentResort: String = data["currentResort"] as! String
+        return User(email: email, password: password, currentResort: currentResort, achievements: [])
+    }
+    
     func fetchUser(ID: String) {
-        var userData : [String:String] = [:]
+        var userData : [String:Any] = [:]
         let db = Firestore.firestore()
         let docRef = db.collection("users").document(ID)
         
@@ -41,11 +47,12 @@ class StateController: ObservableObject {
                 let data = document.data()
                 if let data = data {
                     userData = data
+                    print(userData)
                 }
             }
         }
         
-        db.collection("users").document("ID").collection("Achievements").getDocuments() { (querySnapshot, error) in
+        db.collection("users").document(ID).collection("Achievements").getDocuments() { (querySnapshot, error) in
             if let error = error {
                     print("Error getting documents: \(error)")
             } else {
@@ -55,7 +62,9 @@ class StateController: ObservableObject {
             }
         }
         
-        self.currentUser = User(email: userData["email"]!, password: userData["password"]!, currentResort: userData["currentResort"]!, achievements: [] )
+//        self.currentUser = User(email: "email@email.com", password: "password", currentResort: "verbier", achievements: [])
+        print(userData)
+        self.currentUser = createUser(data: userData)
     }
     
 }
