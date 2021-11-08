@@ -16,6 +16,7 @@ class StateController: ObservableObject {
     var currentUser: User
     var UserID: String = "" {
         didSet {
+            print(UserID)
             fetchUser(ID: UserID)
         }
     }
@@ -25,7 +26,7 @@ class StateController: ObservableObject {
         self.currentUser = currentUser
     }
     
-    func createUser(data: Dictionary<String, Any>) -> User {
+    func userFromData(data: Dictionary<String, Any>) -> User {
         let email: String = data["email"] as! String
         let password: String = data["password"] as! String
         let currentResort: String = data["currentResort"] as! String
@@ -63,8 +64,7 @@ class StateController: ObservableObject {
         }
         
 //        self.currentUser = User(email: "email@email.com", password: "password", currentResort: "verbier", achievements: [])
-        print(userData)
-        self.currentUser = createUser(data: userData)
+        self.currentUser = userFromData(data: userData)
     }
     
 }

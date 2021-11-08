@@ -32,7 +32,8 @@ struct SignUpView: View {
                         print(error.localizedDescription)
                     } else {
                         print("Success")
-                        loggedIn.toggle()
+                        loggedIn = true
+                        state.currentUser = User(email: username, password: password, currentResort: "Verbier", achievements: [])
                     }
                 }
             }
