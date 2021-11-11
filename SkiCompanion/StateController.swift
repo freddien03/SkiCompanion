@@ -33,6 +33,34 @@ class StateController: ObservableObject {
         return User(email: email, password: password, currentResort: currentResort, achievements: [])
     }
     
+    func achievementFromData(data: Dictionary<String, Any>) -> Achievement {
+        let name: String = data["name"] as! String
+        let type: String = data["type"] as! String
+        let progress: Float = data["progress"] as! Float
+        let isComplete: Bool = data["isComplete"] as! Bool
+        let goal: Int = data["goal"] as! Int
+        let ach = Achievement(name: name, type: type, goal: goal)
+        ach.progress = progress
+        ach.isComplete = isComplete
+        return ach
+    }
+    
+    func getAchievements(ID: String) -> [Achievement] {
+        var AchList: [Achievement] = []
+        let db = Firestore.firestore()
+        db.collection("users").document(ID).collection("Achievements").getDocuments() { (querySnapshot, error) in
+            if let error = error {
+                    print("Error getting documents: \(error)")
+            } else {
+                print(querySnapshot!.documents)
+                    for document in querySnapshot!.documents {
+                        AchList.append(self.achievementFromData(data: document.data()))
+                    }
+            }
+        }
+        return AchList
+    }
+    
     func fetchUser(ID: String) {
         var userData : [String:Any] = [:]
         let db = Firestore.firestore()
@@ -48,23 +76,27 @@ class StateController: ObservableObject {
                 let data = document.data()
                 if let data = data {
                     userData = data
-                    print(userData)
+                    self.currentUser = self.userFromData(data: userData)
+                    self.currentUser.achievements = self.getAchievements(ID: ID)
                 }
             }
         }
         
-        db.collection("users").document(ID).collection("Achievements").getDocuments() { (querySnapshot, error) in
-            if let error = error {
-                    print("Error getting documents: \(error)")
-            } else {
-                    for document in querySnapshot!.documents {
-                            print("\(document.documentID): \(document.data())")
-                    }
-            }
-        }
+//        db.collection("users").document(ID).collection("Achievements").getDocuments() { (querySnapshot, error) in
+//            if let error = error {
+//                    print("Error getting documents: \(error)")
+//            } else {
+//                var AchList: [Achievement] = []
+//                    for document in querySnapshot!.documents {
+//                        AchList.append(self.achievementFromData(data: document.data()))
+//
+//                    }
+//
+//            }
+//        }
         
 //        self.currentUser = User(email: "email@email.com", password: "password", currentResort: "verbier", achievements: [])
-        self.currentUser = userFromData(data: userData)
+//        self.currentUser = userFromData(data: userData)
     }
     
 }

@@ -13,7 +13,7 @@ class Achievement {
     let type: String
     let id = UUID()
     let goal: Int
-    var progress: Int = 0
+    var progress: Float = 0
     var isComplete: Bool = false
     
     init(name: String, type: String, goal: Int) {
@@ -24,7 +24,7 @@ class Achievement {
     
     // mark the achievement as completed when goal is reached
     func checkComplete() -> Bool {
-        if progress >= goal{
+        if Int(floor(progress)) >= goal{
             isComplete = true
             return true
         }else{
