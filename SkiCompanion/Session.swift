@@ -21,6 +21,7 @@ class Session {
         self.date = date
     }
     
+    
     // used to keep the top speed up to date
     func updateTopSpeed(currentSpeed: Double) {
         if currentSpeed >= topSpeed {

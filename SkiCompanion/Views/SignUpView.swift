@@ -31,7 +31,6 @@ struct SignUpView: View {
                     if let error = error{
                         print(error.localizedDescription)
                     } else {
-                        print("Success")
                         loggedIn = true
                         state.currentUser = User(email: username, password: password, currentResort: "Verbier", achievements: [])
                     }

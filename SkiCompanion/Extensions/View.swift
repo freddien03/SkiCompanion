@@ -14,13 +14,16 @@ extension View {
             ZStack {
                 self
                     .navigationBarTitle("")
+                    .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
 
                 NavigationLink(
                     destination: view
+                        .navigationBarTitle("")
+                        .navigationBarBackButtonHidden(true)
                         .navigationBarHidden(true),
                     isActive: binding
-                ) {
+                ){
                     EmptyView()
                 }
             }
