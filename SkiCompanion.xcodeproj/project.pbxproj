@@ -20,7 +20,6 @@
 		7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310B26F4D68500699485 /* SignUpView.swift */; };
 		7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE312226F4DC3800699485 /* ProfileView.swift */; };
 		9FAB3DDEF554753F35C66595 /* Pods_SkiCompanion_SkiCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */; };
-		C62D1540271087CF009A58B9 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D153F271087CF009A58B9 /* Auth.swift */; };
 		C6352D0B26FC715E004336E1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D0A26FC715E004336E1 /* View.swift */; };
 		C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D1226FC739E004336E1 /* AchievementsView.swift */; };
 		C642C6D0270748E100282D7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C642C6CF270748E100282D7D /* GoogleService-Info.plist */; };
@@ -30,7 +29,6 @@
 		C669152C2705A8D1003FD294 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C669152B2705A8D1003FD294 /* User.swift */; };
 		C66915312705AA6C003FD294 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915302705AA6C003FD294 /* StateController.swift */; };
 		C66915362705AB32003FD294 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915352705AB32003FD294 /* LocationHandler.swift */; };
-		C6A1E590272FFDB700D1ADAA /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A1E58F272FFDB700D1ADAA /* FirestoreManager.swift */; };
 		D6E28D959058227FE8FBB8B7 /* Pods_SkiCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +72,6 @@
 		7EDE310B26F4D68500699485 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7EDE312226F4DC3800699485 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A5A9427313892C33A447644E /* Pods-SkiCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanion/Pods-SkiCompanion.debug.xcconfig"; sourceTree = "<group>"; };
-		C62D153F271087CF009A58B9 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		C6352D0A26FC715E004336E1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C6352D1226FC739E004336E1 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
 		C642C6CF270748E100282D7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		C669152B2705A8D1003FD294 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C66915302705AA6C003FD294 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		C66915352705AB32003FD294 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
-		C6A1E58F272FFDB700D1ADAA /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanion_SkiCompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanionTests/Pods-SkiCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,7 +154,6 @@
 				7EDE311026F4D69E00699485 /* Views */,
 				C66915302705AA6C003FD294 /* StateController.swift */,
 				C66915262705A79A003FD294 /* Session.swift */,
-				C6A1E58F272FFDB700D1ADAA /* FirestoreManager.swift */,
 				C66915352705AB32003FD294 /* LocationHandler.swift */,
 				C669152B2705A8D1003FD294 /* User.swift */,
 				C66915212705A6B1003FD294 /* Achievement.swift */,
@@ -229,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				C6352D0A26FC715E004336E1 /* View.swift */,
-				C62D153F271087CF009A58B9 /* Auth.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -487,8 +481,6 @@
 				7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */,
 				C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */,
 				7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */,
-				C6A1E590272FFDB700D1ADAA /* FirestoreManager.swift in Sources */,
-				C62D1540271087CF009A58B9 /* Auth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

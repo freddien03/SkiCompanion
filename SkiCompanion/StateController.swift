@@ -94,22 +94,5 @@ class StateController: ObservableObject {
                 }
             }
         }
-        
-//        db.collection("users").document(ID).collection("Achievements").getDocuments() { (querySnapshot, error) in
-//            if let error = error {
-//                    print("Error getting documents: \(error)")
-//            } else {
-//                var AchList: [Achievement] = []
-//                    for document in querySnapshot!.documents {
-//                        AchList.append(self.achievementFromData(data: document.data()))
-//
-//                    }
-//
-//            }
-//        }
-        
-//        self.currentUser = User(email: "email@email.com", password: "password", currentResort: "verbier", achievements: [])
-//        self.currentUser = userFromData(data: userData)
     }
-    
 }

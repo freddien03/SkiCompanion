@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SessionView: View {
+    @State private var currentSession: Session? = nil
+    @EnvironmentObject var state: StateController
     @State private var isSession = false
     @State private var progressTime = 0
     @State private var isRunning = false
@@ -27,6 +29,27 @@ struct SessionView: View {
                 .font(.system(size: 50))
                 .bold()
                 .padding()
+            if let session = currentSession {
+                HStack{
+                    Text("Distance:")
+                        .padding()
+                    Spacer()
+                    Text("\(Int(session.distance)) m")
+                }
+                HStack{
+                    Text("Top Speed:")
+                        .padding()
+                    Spacer()
+                    Text("\(Int(session.topSpeed)) mph")
+                }
+                HStack{
+                    Text("Elevation:")
+                        .padding()
+                    Spacer()
+                    Text("\(Int(session.distance)) m")
+                }
+            }
+            
             HStack{
                 Button(action: {
                     timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
@@ -34,6 +57,7 @@ struct SessionView: View {
                     })
                     isSession.toggle()
                     isRunning.toggle()
+                    currentSession = Session(locations: [], resort: state.currentResort, date: Date())
                 }){
                     if !isSession{
                         Text("Start")
@@ -63,6 +87,11 @@ struct SessionView: View {
                     timer?.invalidate()
                     isRunning = false
                     isSession = false
+                    if let session = currentSession {
+                        session.time = progressTime
+                        state.currentUser.sessions.append(session)
+                        currentSession = nil
+                    }
                     progressTime = 0
                 }){
                     if isSession{

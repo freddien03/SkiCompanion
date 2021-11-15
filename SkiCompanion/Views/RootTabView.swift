@@ -11,10 +11,12 @@ struct RootTabView: View {
     var body: some View {
         NavigationView{
             TabView {
-                ResortView()
+                ProfileView()
                     .tabItem {
-                        Image(systemName: "house")
-                        Text("Home")
+                        VStack{
+                            Image(systemName: "person.fill")
+                            Text("Profile")
+                        }
                     }
                 AchievementsView()
                     .tabItem {
@@ -38,12 +40,10 @@ struct RootTabView: View {
                             Text("weather")
                         }
                     }
-                ProfileView()
+                ResortView()
                     .tabItem {
-                        VStack{
-                            Image(systemName: "person.fill")
-                            Text("Profile")
-                        }
+                        Image(systemName: "map")
+                        Text("Map")
                     }
             }
         }

@@ -11,8 +11,10 @@ import CoreLocation
 class Session {
     var locations: [CLLocation]
     let resort: String
+    var time: Int = 0
     var topSpeed: Double = 0
     var elevation: Double = 0
+    var distance: Double = 0
     let date: Date
     
     init(locations: [CLLocation], resort: String, date: Date) {
@@ -27,5 +29,9 @@ class Session {
         if currentSpeed >= topSpeed {
             topSpeed = currentSpeed
         }
+    }
+    
+    func updateDistance(){
+//        add up the distances between locations
     }
 }

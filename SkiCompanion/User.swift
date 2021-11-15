@@ -35,16 +35,17 @@ class User {
         }
     }
     
-//    func daysSkiing() {
-//        if self.sessions.count != 0{
-//            let fromDate = startOfDay(for: sessions[0])
-//            let toDate = startOfDay(for: to)
-//            let numberOfDays = dateComponents([.day], from: fromDate, to: toDate)
-//
-//                    return numberOfDays.day! + 1 // <1>
-//        }else{
-//            return 0
-//        }
-//    }
+    func daysSkiing() -> Int{
+        let calendar = Calendar.gregorian
+        if self.sessions.count != 0{
+            let fromDate = calendar.startOfDay(for: sessions[0])
+            let toDate = calendar.startOfDay(for: Date())
+            let numberOfDays = calendar.dateComponents([.day], from: fromDate, to: toDate)
+
+            return numberOfDays.day! + 1
+        }else{
+            return 0
+        }
+    }
     
 }
