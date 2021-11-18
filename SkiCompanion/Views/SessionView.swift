@@ -69,6 +69,14 @@ struct SessionView: View {
                         timer?.invalidate()
                     }else{
                         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+                            if progressTime%5 == 0{
+                                state.getLocation()
+                                if let currentSession = currentSession{
+                                    if let location = state.lastKnownLocation {
+                                        currentSession.locations.append(location)
+                                    }
+                                }
+                            }
                             progressTime += 1
                         })
                     }
@@ -101,6 +109,9 @@ struct SessionView: View {
             }
             .padding()
         }
+        .onAppear(perform: {
+            state.requestAccessToLocationData()
+        })
         
     }
 }

@@ -12,9 +12,11 @@ struct ProfileView: View {
     var body: some View {
         VStack{
             Text(state.currentUser.username() + "'s Profile")
+                .font(.title)
+                .bold()
                 .padding()
             Text("Current Resort: "+state.currentResort)
-            Text("Days Skiing: ")
+            Text("Days Skiing: \(state.currentUser.daysSkiing())")
         }
     }
 }

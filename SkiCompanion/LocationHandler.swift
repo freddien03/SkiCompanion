@@ -28,19 +28,11 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let firstLocation = locations.first {
-            geocoder.reverseGeocodeLocation(firstLocation, completionHandler: { (placemarks, error) in
-                if error != nil {
-                    self.stateController?.lastKnownLocation = "Error"
-                } else {
-                    if let firstPlacemark = placemarks?[0] {
-                        self.stateController?.lastKnownLocation = firstPlacemark.locality ?? "Error Finding Locality"
-                    }
-                }
-            })
+            self.stateController?.lastKnownLocation = firstLocation
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        stateController?.lastKnownLocation = "Error Finding Location"
+        stateController?.lastKnownLocation = nil
     }
 }

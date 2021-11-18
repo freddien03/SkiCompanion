@@ -11,7 +11,7 @@ import Firebase
 
 class StateController: ObservableObject {
     let locationHandler: LocationHandler = LocationHandler()
-    var lastKnownLocation: String = ""
+    var lastKnownLocation: CLLocation? = nil
     var currentResort: String
     var currentUser: User
     var UserID: String = "" {
@@ -24,6 +24,15 @@ class StateController: ObservableObject {
     init(currentResort: String, currentUser: User) {
         self.currentResort = currentResort
         self.currentUser = currentUser
+    }
+    
+    func getLocation() {
+        locationHandler.requestLocation()
+    }
+    
+    func requestAccessToLocationData() {
+        locationHandler.stateController = self
+        locationHandler.requestAuthorisation()
     }
     
     func userFromData(data: Dictionary<String, Any>) -> User {

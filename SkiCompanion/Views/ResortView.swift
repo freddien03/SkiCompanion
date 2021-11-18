@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResortView: View {
+    @EnvironmentObject var state: StateController
     var body: some View {
         Text("select resort")
     }

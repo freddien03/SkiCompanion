@@ -36,9 +36,9 @@ class User {
     }
     
     func daysSkiing() -> Int{
-        let calendar = Calendar.gregorian
+        let calendar = Calendar(identifier: .gregorian)
         if self.sessions.count != 0{
-            let fromDate = calendar.startOfDay(for: sessions[0])
+            let fromDate = calendar.startOfDay(for: sessions[0].date)
             let toDate = calendar.startOfDay(for: Date())
             let numberOfDays = calendar.dateComponents([.day], from: fromDate, to: toDate)
 
