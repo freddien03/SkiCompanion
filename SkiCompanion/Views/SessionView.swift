@@ -7,12 +7,17 @@
 
 import SwiftUI
 
+import MapKit
+
+import CoreLocation
+
 struct SessionView: View {
     @State private var currentSession: Session? = nil
     @EnvironmentObject var state: StateController
     @State private var isSession = false
     @State private var progressTime = 0
     @State private var isRunning = false
+    @State private var mapCoord: MKCoordinateRegion = MKCoordinateRegion()
     var hours: Int {
         progressTime/3600
     }
@@ -46,13 +51,22 @@ struct SessionView: View {
                     Text("Elevation:")
                         .padding()
                     Spacer()
-                    Text("\(Int(session.distance)) m")
+                    Text("\(Int(session.elevation)) m")
                 }
             }
             
             HStack{
                 Button(action: {
                     timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+                        if progressTime%5 == 0{
+                            state.getLocation()
+                            if let currentSession = currentSession{
+                                if state.lastKnownLocation != CLLocation() {
+                                    currentSession.locations.append(state.lastKnownLocation)
+                                    mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+                                }
+                            }
+                        }
                         progressTime += 1
                     })
                     isSession.toggle()
@@ -72,8 +86,9 @@ struct SessionView: View {
                             if progressTime%5 == 0{
                                 state.getLocation()
                                 if let currentSession = currentSession{
-                                    if let location = state.lastKnownLocation {
-                                        currentSession.locations.append(location)
+                                    if state.lastKnownLocation != CLLocation() {
+                                        currentSession.locations.append(state.lastKnownLocation)
+                                        mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
                                     }
                                 }
                             }
@@ -108,6 +123,13 @@ struct SessionView: View {
                 }
             }
             .padding()
+            
+            if let session = currentSession {
+                if session.locations.count != 0{
+//                    Map(coordinateRegion: $mapCoord)
+                    Map(coordinateRegion: $mapCoord, showsUserLocation: true)
+                }
+            }
         }
         .onAppear(perform: {
             state.requestAccessToLocationData()

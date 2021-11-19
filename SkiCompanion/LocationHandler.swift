@@ -28,11 +28,11 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let firstLocation = locations.first {
-            self.stateController?.lastKnownLocation = firstLocation
+            stateController?.lastKnownLocation = firstLocation
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        stateController?.lastKnownLocation = nil
+        stateController?.lastKnownLocation = CLLocation()
     }
 }

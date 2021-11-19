@@ -11,7 +11,7 @@ import Firebase
 
 class StateController: ObservableObject {
     let locationHandler: LocationHandler = LocationHandler()
-    var lastKnownLocation: CLLocation? = nil
+    var lastKnownLocation: CLLocation = CLLocation()
     var currentResort: String
     var currentUser: User
     var UserID: String = "" {
