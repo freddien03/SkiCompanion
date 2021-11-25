@@ -14,6 +14,7 @@ class Session: ObservableObject {
         didSet{
             self.updateTopSpeed()
             self.updateDistance()
+            self.updateElevation()
             self.mapCoord = MKCoordinateRegion(center: locations[locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
         }
     }
@@ -37,10 +38,8 @@ class Session: ObservableObject {
         var currentSpeed: Double = 0
         if self.locations.count >= 2{
             let lastLocations = [self.locations[self.locations.count-1], self.locations[self.locations.count-2]]
-            let latDist = abs(lastLocations[0].coordinate.latitude - lastLocations[1].coordinate.latitude)
-            let longDist = abs(lastLocations[0].coordinate.longitude - lastLocations[1].coordinate.longitude)
-            let dist = sqrt(pow(latDist, 2) + pow(longDist, 2))
-            currentSpeed = sqrt(pow(latDist, 2) + pow(longDist, 2))/lastLocations[0].timestamp.timeIntervalSince(lastLocations[1].timestamp)
+            currentSpeed = lastLocations[0].distance(from: lastLocations[1])/lastLocations[0].timestamp.timeIntervalSince(lastLocations[1].timestamp)
+            currentSpeed = currentSpeed*2.236936
         }
         print("speed \(currentSpeed)")
         if currentSpeed >= self.topSpeed {
@@ -51,11 +50,25 @@ class Session: ObservableObject {
     func updateDistance(){
         if self.locations.count > 1{
             let lastLocations = [self.locations[self.locations.count-1], self.locations[self.locations.count-2]]
-            let latDist = abs(lastLocations[0].coordinate.latitude - lastLocations[1].coordinate.latitude)
-            let longDist = abs(lastLocations[0].coordinate.longitude - lastLocations[1].coordinate.longitude)
-            let dist = sqrt(pow(latDist, 2) + pow(longDist, 2))
+            let dist = lastLocations[0].distance(from: lastLocations[1])
             print("dist \(dist)")
             self.distance += dist
+        }
+    }
+    
+    func updateElevation(){
+        var limits = [Double.greatestFiniteMagnitude, Double.zero]
+        if self.locations.count >= 2{
+            for location in self.locations{
+                if location.altitude < limits[0] {
+                    limits[0] = location.altitude
+                }
+                if location.altitude > limits[1]{
+                    limits[1] = location.altitude
+                }
+            }
+            print(limits)
+            self.elevation = limits[0] - limits[1]
         }
     }
 }

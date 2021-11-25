@@ -39,7 +39,12 @@ struct SessionView: View {
                     Text("Distance:")
                         .padding()
                     Spacer()
-                    Text("\(Int(session.distance)) m")
+                    if session.distance >= 1000{
+//                        var rounded = session.distance/1000
+                        Text("\(round(session.distance/10)/100) km")
+                    }else{
+                        Text("\(Int(session.distance)) m")
+                    }
                 }
                 HStack{
                     Text("Top Speed:")
@@ -57,8 +62,10 @@ struct SessionView: View {
             
             HStack{
                 Button(action: {
+                    state.getLocation()
                     timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
-                        if progressTime%5 == 0{
+                        progressTime += 1
+                        if progressTime%3 == 0{
                             state.getLocation()
                             if let currentSession = currentSession{
                                 if state.lastKnownLocation != CLLocation() {
@@ -67,7 +74,6 @@ struct SessionView: View {
                                 }
                             }
                         }
-                        progressTime += 1
                     })
                     isSession.toggle()
                     isRunning.toggle()
@@ -83,7 +89,8 @@ struct SessionView: View {
                         timer?.invalidate()
                     }else{
                         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
-                            if progressTime%5 == 0{
+                            progressTime += 1
+                            if progressTime%3 == 0{
                                 state.getLocation()
                                 if let currentSession = currentSession{
                                     if state.lastKnownLocation != CLLocation() {
@@ -92,7 +99,6 @@ struct SessionView: View {
                                     }
                                 }
                             }
-                            progressTime += 1
                         })
                     }
                     isRunning.toggle()
