@@ -40,7 +40,6 @@ struct SessionView: View {
                         .padding()
                     Spacer()
                     if session.distance >= 1000{
-//                        var rounded = session.distance/1000
                         Text("\(round(session.distance/10)/100) km")
                     }else{
                         Text("\(Int(session.distance)) m")
@@ -84,48 +83,48 @@ struct SessionView: View {
                     }
                 }
                 
-                Button(action: {
-                    if isRunning{
-                        timer?.invalidate()
-                    }else{
-                        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
-                            progressTime += 1
-                            if progressTime%3 == 0{
-                                state.getLocation()
-                                if let currentSession = currentSession{
-                                    if state.lastKnownLocation != CLLocation() {
-                                        currentSession.locations.append(state.lastKnownLocation)
-                                        mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+                if isSession{
+                    Button(action: {
+                        if isRunning{
+                            timer?.invalidate()
+                        }else{
+                            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+                                progressTime += 1
+                                if progressTime%3 == 0{
+                                    state.getLocation()
+                                    if let currentSession = currentSession{
+                                        if state.lastKnownLocation != CLLocation() {
+                                            currentSession.locations.append(state.lastKnownLocation)
+                                            mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+                                        }
                                     }
                                 }
-                            }
-                        })
-                    }
-                    isRunning.toggle()
-                }){
-                    if isSession{
+                            })
+                        }
+                        isRunning.toggle()
+                    }){
                         if isRunning{
                             Text("Pause")
                         }else{
                             Text("Resume")
                         }
                     }
+                    .padding()
                 }
                 
-                Button(action: {
-                    timer?.invalidate()
-                    isRunning = false
-                    isSession = false
-                    if let session = currentSession {
-                        session.time = progressTime
-                        state.currentUser.sessions.append(session)
-                        currentSession = nil
-                    }
-                    progressTime = 0
-                }){
-                    if isSession{
-                        Text("Stop")
-                    }
+                if isSession {
+                    Button("Stop", action: {
+                        timer?.invalidate()
+                        isRunning = false
+                        isSession = false
+                        if let session = currentSession {
+                            session.time = progressTime
+                            state.currentUser.sessions.append(session)
+                            currentSession = nil
+                        }
+                        progressTime = 0
+                    })
+                    .padding()
                 }
             }
             .padding()

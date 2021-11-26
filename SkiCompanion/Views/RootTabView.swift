@@ -40,7 +40,7 @@ struct RootTabView: View {
                             Text("weather")
                         }
                     }
-                ResortView()
+                MapView()
                     .tabItem {
                         Image(systemName: "map")
                         Text("Map")
