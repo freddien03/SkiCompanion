@@ -31,6 +31,9 @@
 		C66915362705AB32003FD294 /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915352705AB32003FD294 /* LocationHandler.swift */; };
 		C6ABBC6B275149710030518B /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABBC6A275149710030518B /* MapView.swift */; };
 		C6ABBC70275149BA0030518B /* MapLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6ABBC6F275149BA0030518B /* MapLoader.swift */; };
+		C6DD6B822754E74E00E240DB /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B812754E74E00E240DB /* WeatherAPI.swift */; };
+		C6DD6B872754E8D700E240DB /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B862754E8D700E240DB /* WeatherInfo.swift */; };
+		C6DD6B8C2754ECFB00E240DB /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */; };
 		D6E28D959058227FE8FBB8B7 /* Pods_SkiCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,9 @@
 		C66915352705AB32003FD294 /* LocationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		C6ABBC6A275149710030518B /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		C6ABBC6F275149BA0030518B /* MapLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLoader.swift; sourceTree = "<group>"; };
+		C6DD6B812754E74E00E240DB /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		C6DD6B862754E8D700E240DB /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
+		C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanion_SkiCompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanionTests/Pods-SkiCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 				C66915262705A79A003FD294 /* Session.swift */,
 				C6ABBC6F275149BA0030518B /* MapLoader.swift */,
 				C66915352705AB32003FD294 /* LocationHandler.swift */,
+				C6DD6B862754E8D700E240DB /* WeatherInfo.swift */,
+				C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */,
+				C6DD6B812754E74E00E240DB /* WeatherAPI.swift */,
 				C669152B2705A8D1003FD294 /* User.swift */,
 				C66915212705A6B1003FD294 /* Achievement.swift */,
 				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
@@ -481,12 +490,15 @@
 				C6ABBC70275149BA0030518B /* MapLoader.swift in Sources */,
 				C66915362705AB32003FD294 /* LocationHandler.swift in Sources */,
 				C669152C2705A8D1003FD294 /* User.swift in Sources */,
+				C6DD6B822754E74E00E240DB /* WeatherAPI.swift in Sources */,
 				C6ABBC6B275149710030518B /* MapView.swift in Sources */,
+				C6DD6B8C2754ECFB00E240DB /* WeatherResponse.swift in Sources */,
 				7EDE310726F4D64A00699485 /* ResortView.swift in Sources */,
 				C642C6D527074A2400282D7D /* LoginView.swift in Sources */,
 				C66915272705A79A003FD294 /* Session.swift in Sources */,
 				7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */,
 				7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */,
+				C6DD6B872754E8D700E240DB /* WeatherInfo.swift in Sources */,
 				C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */,
 				7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */,
 			);
