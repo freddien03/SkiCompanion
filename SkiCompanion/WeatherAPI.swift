@@ -23,7 +23,8 @@ class WeatherAPI {
             return
         }
         
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let data = data {

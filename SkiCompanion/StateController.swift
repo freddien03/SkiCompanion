@@ -11,8 +11,15 @@ import Firebase
 
 class StateController: ObservableObject {
     let locationHandler: LocationHandler = LocationHandler()
+    let weatherAPI: WeatherAPI = WeatherAPI()
     var lastKnownLocation: CLLocation = CLLocation()
-    var currentResort: String
+    var currentResort: String {
+        didSet{
+            weatherAPI.getWeather(currentResort, completion: { weather in
+                print(weather)
+            })
+        }
+    }
     var currentUser: User
     var UserID: String = "" {
         didSet {
@@ -24,6 +31,8 @@ class StateController: ObservableObject {
     init(currentResort: String, currentUser: User) {
         self.currentResort = currentResort
         self.currentUser = currentUser
+        weatherAPI.getWeather(currentResort, completion: { weather in
+        })
     }
     
     func getLocation() {
