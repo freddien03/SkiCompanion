@@ -8,17 +8,23 @@
 import Foundation
 
 struct WeatherInfo: Decodable {
-    let name: String
     let snow: Float
-    let desc: String
-    let temp: Int
-    let wind: Int
+    let midStats: Mid
     
     private enum CodingKeys: String, CodingKey {
-        case name = "name"
         case snow = "snow_mm"
+        case midStats = "mid"
+    }
+}
+
+struct Mid: Decodable {
+    let desc: String
+    let wind: Int
+    let temp: Float
+    
+    private enum CodingKeys: String, CodingKey {
         case desc = "wx_desc"
-        case temp = "temp_c"
         case wind = "windspd_mph"
+        case temp = "temp_c"
     }
 }

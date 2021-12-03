@@ -23,7 +23,6 @@ class StateController: ObservableObject {
     var currentUser: User
     var UserID: String = "" {
         didSet {
-            print(UserID)
             fetchUser(ID: UserID)
         }
     }
