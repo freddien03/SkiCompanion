@@ -24,7 +24,7 @@ class WeatherAPI {
         }
         
         var request = URLRequest(url: url)
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
+//        request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         

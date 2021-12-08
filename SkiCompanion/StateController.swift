@@ -53,7 +53,7 @@ class StateController: ObservableObject {
     func achievementFromData(data: Dictionary<String, Any>) -> Achievement {
         let name: String = data["name"] as! String
         let type: String = data["type"] as! String
-        let progress: Float = data["progress"] as! Float
+        let progress: Double = data["progress"] as! Double
         let isComplete: Bool = data["isComplete"] as! Bool
         let goal: Int = data["goal"] as! Int
         let ach = Achievement(name: name, type: type, goal: goal)

@@ -10,15 +10,18 @@ import SwiftUI
 struct AchievementsView: View {
     @EnvironmentObject var state: StateController
     var body: some View {
-        List {
+        List{
             ForEach(state.currentUser.achievements, id: \.id) { achievement in
                 HStack{
                     Text(achievement.name)
                     Spacer()
-                    Text(String(achievement.progress)+"/"+String(achievement.goal))
+                    Text("\(Int(achievement.progress))/\(achievement.goal)")
                     Text(achievement.type)
                 }
             }
+            .onDelete(perform: { indexSet in
+                state.currentUser.achievements.remove(atOffsets: indexSet)
+            })
         }
     }
 }

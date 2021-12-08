@@ -8,11 +8,29 @@
 import Foundation
 import Firebase
 
-class User {
+class User: ObservableObject {
     let email: String
     let password: String
-    var sessions: [Session] = []
-    var achievements: [Achievement] = []
+    var sessions: [Session] = [] {
+        didSet{
+            for achievement in self.achievements{
+                if !achievement.isComplete{
+                    switch achievement.type {
+                    case "km":
+                        achievement.progress += (sessions[sessions.count-1].distance)/1000
+                    case "mph":
+                        if sessions[sessions.count-1].topSpeed > achievement.progress{
+                            achievement.progress = sessions[sessions.count-1].topSpeed
+                        }
+                    default:
+                        print()
+                    }
+                    achievement.checkComplete()
+                }
+            }
+        }
+    }
+    @Published var achievements: [Achievement] = []
     var currrentResort: String
     
     init(email: String, password: String, currentResort: String, achievements: [Achievement]) {

@@ -22,7 +22,6 @@
 		9FAB3DDEF554753F35C66595 /* Pods_SkiCompanion_SkiCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */; };
 		C6352D0B26FC715E004336E1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D0A26FC715E004336E1 /* View.swift */; };
 		C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D1226FC739E004336E1 /* AchievementsView.swift */; };
-		C642C6D0270748E100282D7D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C642C6CF270748E100282D7D /* GoogleService-Info.plist */; };
 		C642C6D527074A2400282D7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C642C6D427074A2400282D7D /* LoginView.swift */; };
 		C66915222705A6B1003FD294 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915212705A6B1003FD294 /* Achievement.swift */; };
 		C66915272705A79A003FD294 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915262705A79A003FD294 /* Session.swift */; };
@@ -36,6 +35,7 @@
 		C6DD6B822754E74E00E240DB /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B812754E74E00E240DB /* WeatherAPI.swift */; };
 		C6DD6B872754E8D700E240DB /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B862754E8D700E240DB /* WeatherInfo.swift */; };
 		C6DD6B8C2754ECFB00E240DB /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */; };
+		C6E390B62760DA3A00885954 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6E390B52760DA3A00885954 /* GoogleService-Info.plist */; };
 		D6E28D959058227FE8FBB8B7 /* Pods_SkiCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +81,6 @@
 		A5A9427313892C33A447644E /* Pods-SkiCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanion/Pods-SkiCompanion.debug.xcconfig"; sourceTree = "<group>"; };
 		C6352D0A26FC715E004336E1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C6352D1226FC739E004336E1 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
-		C642C6CF270748E100282D7D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C642C6D427074A2400282D7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C66915212705A6B1003FD294 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		C66915262705A79A003FD294 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		C6DD6B812754E74E00E240DB /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		C6DD6B862754E8D700E240DB /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		C6E390B52760DA3A00885954 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanion_SkiCompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanionTests/Pods-SkiCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
 				7EDE30CA26F337D100699485 /* Assets.xcassets */,
 				7EDE30D426F337D100699485 /* Info.plist */,
-				C642C6CF270748E100282D7D /* GoogleService-Info.plist */,
+				C6E390B52760DA3A00885954 /* GoogleService-Info.plist */,
 				7EDE30CC26F337D100699485 /* Preview Content */,
 			);
 			path = SkiCompanion;
@@ -359,7 +359,7 @@
 			files = (
 				7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */,
 				7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */,
-				C642C6D0270748E100282D7D /* GoogleService-Info.plist in Resources */,
+				C6E390B62760DA3A00885954 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
