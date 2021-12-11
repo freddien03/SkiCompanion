@@ -7,14 +7,14 @@
 
 import Foundation
 
-class Achievement {
+class Achievement: ObservableObject {
     
     let name: String
     let type: String
     let id = UUID()
     let goal: Int
     var progress: Double = 0
-    var isComplete: Bool = false
+    @Published var isComplete: Bool = false
     
     init(name: String, type: String, goal: Int) {
         self.name = name

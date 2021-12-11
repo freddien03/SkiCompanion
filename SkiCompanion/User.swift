@@ -22,15 +22,18 @@ class User: ObservableObject {
                         if sessions[sessions.count-1].topSpeed > achievement.progress{
                             achievement.progress = sessions[sessions.count-1].topSpeed
                         }
-                    default:
-                        print()
+                    default: ()
                     }
-                    achievement.checkComplete()
                 }
+                achievement.checkComplete()
             }
         }
     }
-    @Published var achievements: [Achievement] = []
+    @Published var achievements: [Achievement] = [] {
+        willSet{
+            objectWillChange.send()
+        }
+    }
     var currrentResort: String
     
     init(email: String, password: String, currentResort: String, achievements: [Achievement]) {

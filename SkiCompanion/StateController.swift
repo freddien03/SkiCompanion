@@ -20,7 +20,7 @@ class StateController: ObservableObject {
             })
         }
     }
-    var currentUser: User
+    @Published var currentUser: User
     var UserID: String = "" {
         didSet {
             fetchUser(ID: UserID)
