@@ -131,7 +131,6 @@ struct SessionView: View {
             
             if let session = currentSession {
                 if session.locations.count != 0{
-//                    Map(coordinateRegion: $mapCoord)
                     Map(coordinateRegion: $mapCoord, showsUserLocation: true)
                 }
             }

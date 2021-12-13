@@ -10,19 +10,14 @@ struct AchievementsView: View {
     @EnvironmentObject var state: StateController
     var body: some View {
         VStack{
-            Text("\(state.currentUser.achievements[0].progress)")
+//            Text("\(state.currentUser.achievements[0].progress)")
             List{
                 Text("INCOMPLETE")
                     .bold()
                     .font(.title)
                 ForEach(state.currentUser.achievements, id: \.id) { achievement in
-                    if !achievement.isComplete{
-                        HStack{
-                            Text(achievement.name)
-                            Spacer()
-                            Text("\(Int(achievement.progress))/\(achievement.goal)")
-                            Text(achievement.type)
-                        }
+                    if !achievement.isComplete {
+                        AchievementItem(achievement: achievement)
                     }
                 }
 //                .onDelete(perform: { indexSet in
@@ -33,12 +28,7 @@ struct AchievementsView: View {
                     .font(.title)
                 ForEach(state.currentUser.achievements, id: \.id) { achievement in
                     if achievement.isComplete{
-                        HStack{
-                            Text(achievement.name)
-                            Spacer()
-                            Text("\(Int(achievement.progress))/\(achievement.goal)")
-                            Text(achievement.type)
-                        }
+                        AchievementItem(achievement: achievement)
                     }
                 }
 //                .onDelete(perform: { indexSet in

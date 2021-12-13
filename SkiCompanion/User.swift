@@ -29,11 +29,7 @@ class User: ObservableObject {
             }
         }
     }
-    @Published var achievements: [Achievement] = [] {
-        willSet{
-            objectWillChange.send()
-        }
-    }
+    @Published var achievements: [Achievement] = []
     var currrentResort: String
     
     init(email: String, password: String, currentResort: String, achievements: [Achievement]) {

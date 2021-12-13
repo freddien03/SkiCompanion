@@ -25,8 +25,8 @@ class Achievement: ObservableObject {
     // mark the achievement as completed when goal is reached
     func checkComplete(){
         if Int(floor(progress)) >= goal{
-            isComplete = true
-            progress = Double(goal)
+            self.isComplete = true
+            self.progress = Double(goal)
         }
     }
 }

@@ -10,6 +10,7 @@ import CoreLocation
 import Firebase
 
 class StateController: ObservableObject {
+    var currentAchievements: [Achievement] = []
     let locationHandler: LocationHandler = LocationHandler()
     let weatherAPI: WeatherAPI = WeatherAPI()
     var lastKnownLocation: CLLocation = CLLocation()
@@ -32,6 +33,7 @@ class StateController: ObservableObject {
         self.currentUser = currentUser
         weatherAPI.getWeather(currentResort, completion: { weather in
         })
+        self.currentAchievements = currentUser.achievements
     }
     
     func getLocation() {

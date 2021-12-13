@@ -38,7 +38,8 @@ class Session: ObservableObject {
         var currentSpeed: Double = 0
         if self.locations.count >= 2{
             let lastLocations = [self.locations[self.locations.count-1], self.locations[self.locations.count-2]]
-            currentSpeed = lastLocations[0].distance(from: lastLocations[1])/lastLocations[0].timestamp.timeIntervalSince(lastLocations[1].timestamp)
+            let timeTaken = lastLocations[0].timestamp.timeIntervalSince(lastLocations[1].timestamp)
+            currentSpeed = lastLocations[0].distance(from: lastLocations[1])/timeTaken
             currentSpeed = currentSpeed*2.236936
         }
         print("speed \(currentSpeed)")
