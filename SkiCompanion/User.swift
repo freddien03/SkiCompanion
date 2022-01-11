@@ -14,19 +14,24 @@ class User: ObservableObject {
     var sessions: [Session] = [] {
         didSet{
             for achievement in self.achievements{
+                // loop through all achievements still in progress
                 if !achievement.isComplete{
                     switch achievement.type {
                     case "km":
+                        // add distance
                         achievement.progress += (sessions[sessions.count-1].distance)/1000
                     case "mph":
+                        // update top speed if higher
                         if sessions[sessions.count-1].topSpeed > achievement.progress{
                             achievement.progress = sessions[sessions.count-1].topSpeed
                         }
                     default: ()
                     }
                 }
+                // update isComplete if complete
                 achievement.checkComplete()
             }
+            
         }
     }
     @Published var achievements: [Achievement] = []

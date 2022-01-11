@@ -10,8 +10,10 @@ import SwiftUI
 struct AchievementItem: View {
     @EnvironmentObject var state: StateController
     @ObservedObject var achievement: Achievement
+    @State var showComplete: Bool
     var body: some View {
-        if !achievement.isComplete{
+        // show achievement if correct completeness
+        if achievement.isComplete == showComplete{
             HStack{
                 Text(achievement.name)
                 Spacer()
@@ -24,6 +26,6 @@ struct AchievementItem: View {
 
 struct AchievementItem_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementItem(achievement: Achievement(name: "", type: "", goal: 0))
+        AchievementItem(achievement: Achievement(name: "", type: "", goal: 0), showComplete: false)
     }
 }

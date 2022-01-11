@@ -13,7 +13,7 @@ struct SkiCompanionApp: App {
   @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
   var body: some Scene {
     WindowGroup {
-      RootTabView()
+      SignUpView()
         .environmentObject(StateController(currentResort: "Verbier", currentUser: User(email: "test@admin.com", password: "password", currentResort: "Verbier", achievements: [Achievement(name: "Novice Distance", type: "km", goal: 100), Achievement(name: "Novice Speed", type: "mph", goal: 30)]))
 )
     }

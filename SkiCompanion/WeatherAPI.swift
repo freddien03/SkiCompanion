@@ -13,9 +13,11 @@ class WeatherAPI {
     ]
     let baseURL = "https://api.weatherunlocked.com/"
     
-    func getWeather(_ toSearch: String, completion: @escaping ([WeatherInfo]?) -> Void) {
+    func getWeather(_ toSearch: String, completion: @escaping (WeatherInfo?) -> Void) {
+        // create url
         let path = "api/resortforecast/\(resortID[toSearch] ?? "")?app_id=ef6a164d&app_key=88c9673884a12e2a3374ee1be536c93b"
             .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        // check in correct form
         guard let url = URL(string: baseURL + path)
         else {
           print("invalid URL")
@@ -24,22 +26,25 @@ class WeatherAPI {
         }
         
         var request = URLRequest(url: url)
-//        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        // ensure response is in JSON form
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
+            // if it gets a valid response from URL, parse and return midday result
             if let data = data {
                 if let response = self.parseJson(json: data) {
-                    completion(response.forecast)
+                    completion(response.forecast[4])
                 }
             }
         }.resume()
         
     }
     
-    func parseJson(json: Data) -> WeatherResponse? {
+    private func parseJson(json: Data) -> WeatherResponse? {
         let decoder = JSONDecoder()
+        // attempt to parse, give error if not
         if let weatherResponse = try? decoder.decode(WeatherResponse.self, from: json) {
             return weatherResponse
         } else {

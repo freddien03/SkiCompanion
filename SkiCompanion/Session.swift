@@ -12,6 +12,7 @@ import MapKit
 class Session: ObservableObject {
     var locations: [CLLocation]{
         didSet{
+            // update metrics
             self.updateTopSpeed()
             self.updateDistance()
             self.updateElevation()
@@ -42,7 +43,6 @@ class Session: ObservableObject {
             currentSpeed = lastLocations[0].distance(from: lastLocations[1])/timeTaken
             currentSpeed = currentSpeed*2.236936
         }
-        print("speed \(currentSpeed)")
         if currentSpeed >= self.topSpeed {
             self.topSpeed = currentSpeed
         }
@@ -52,7 +52,6 @@ class Session: ObservableObject {
         if self.locations.count > 1{
             let lastLocations = [self.locations[self.locations.count-1], self.locations[self.locations.count-2]]
             let dist = lastLocations[0].distance(from: lastLocations[1])
-            print("dist \(dist)")
             self.distance += dist
         }
     }
@@ -68,8 +67,7 @@ class Session: ObservableObject {
                     limits[1] = location.altitude
                 }
             }
-            print(limits)
-            self.elevation = limits[0] - limits[1]
+            self.elevation = limits[1] - limits[0]
         }
     }
 }

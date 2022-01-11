@@ -14,32 +14,40 @@ struct LoginView: View {
     @State private var success = false
     @EnvironmentObject var state: StateController
     var body: some View {
-        VStack{
-            Text("Log In")
-                .font(.system(size: 30, weight: .semibold))
-            HStack{
-                Image(systemName: "envelope").foregroundColor(.gray)
-                TextField("Email", text: $email)
-                    .disableAutocorrection(true)
-            }
-            HStack{
-                Image(systemName: "lock").foregroundColor(.gray)
-                SecureField("Password", text: $password)
-            }
-            Button("Log In") {
-                Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
-                    if error != nil {
-                        print(error?.localizedDescription ?? "")
-                    } else {
-                        print("success")
-                        success = true
-                        state.UserID = Auth.auth().currentUser?.uid ?? ""
+        NavigationView{
+            VStack{
+                NavigationLink(destination: RootTabView(), isActive: $success) { EmptyView() }
+                
+                Text("Log In")
+                    .font(.system(size: 30, weight: .semibold))
+                HStack{
+                    Image(systemName: "envelope").foregroundColor(.gray)
+                    TextField("Email", text: $email)
+                        .autocapitalization(.none)
+                        .keyboardType(.emailAddress)
+                        .disableAutocorrection(true)
+                }
+                HStack{
+                    Image(systemName: "lock").foregroundColor(.gray)
+                    SecureField("Password", text: $password)
+                }
+                Button("Log In") {
+                    Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
+                        if error != nil {
+                            print(error?.localizedDescription ?? "")
+                        } else {
+                            print("success")
+                            success = true
+                            state.UserID = Auth.auth().currentUser?.uid ?? ""
+                        }
                     }
                 }
+                .padding()
             }
-            .padding()
         }
-        .navigate(to: RootTabView(), when: $success)
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitle(Text(""), displayMode: .inline)
+        .navigationBarHidden(true)
     }
 }
 

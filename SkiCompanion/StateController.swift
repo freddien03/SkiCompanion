@@ -10,15 +10,13 @@ import CoreLocation
 import Firebase
 
 class StateController: ObservableObject {
-    var currentAchievements: [Achievement] = []
+    @Published var latestForecast: WeatherInfo? = nil
     let locationHandler: LocationHandler = LocationHandler()
     let weatherAPI: WeatherAPI = WeatherAPI()
     var lastKnownLocation: CLLocation = CLLocation()
     var currentResort: String {
         didSet{
-            weatherAPI.getWeather(currentResort, completion: { weather in
-                print(weather)
-            })
+            getWeather()
         }
     }
     @Published var currentUser: User
@@ -31,9 +29,17 @@ class StateController: ObservableObject {
     init(currentResort: String, currentUser: User) {
         self.currentResort = currentResort
         self.currentUser = currentUser
+        getWeather()
+    }
+    
+    // retieve weather stats and put in latestForecast
+    func getWeather()  {
         weatherAPI.getWeather(currentResort, completion: { weather in
+            if let weather = weather{
+                self.latestForecast = weather
+            }
         })
-        self.currentAchievements = currentUser.achievements
+
     }
     
     func getLocation() {
@@ -62,6 +68,27 @@ class StateController: ObservableObject {
         ach.progress = progress
         ach.isComplete = isComplete
         return ach
+    }
+    
+    func getStarterAchievements(completion: @escaping (Result<[Achievement], Error>) -> Void){
+        var AchList: [Achievement] = []
+        let db = Firestore.firestore()
+        db.collection("AchievementsTemplate").getDocuments() { (querySnapshot, error) in
+            if let error = error {
+                    print("Error getting documents: \(error)")
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            } else {
+                print(querySnapshot!.documents)
+                    for document in querySnapshot!.documents {
+                        AchList.append(self.achievementFromData(data: document.data()))
+                    }
+                DispatchQueue.main.async {
+                    completion(.success(AchList))
+                }
+            }
+        }
     }
     
     func getAchievements(ID: String, completion: @escaping (Result<[Achievement], Error>) -> Void){

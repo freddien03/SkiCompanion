@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RootTabView: View {
+    @EnvironmentObject var state: StateController
     var body: some View {
-        NavigationView{
             TabView {
                 ProfileView()
                     .tabItem {
@@ -18,7 +18,7 @@ struct RootTabView: View {
                             Text("Profile")
                         }
                     }
-                AchievementsView()
+                AchievementsView(user: state.currentUser)
                     .tabItem {
                         VStack{
                             Image(systemName: "star.circle")
@@ -46,11 +46,10 @@ struct RootTabView: View {
                         Text("Map")
                     }
             }
+            .navigationBarTitle(Text(""), displayMode: .inline)
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
         }
-        .navigationBarTitle("")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
-    }
 }
 
 struct RootTabView_Previews: PreviewProvider {

@@ -13,7 +13,7 @@ class Achievement: ObservableObject {
     let type: String
     let id = UUID()
     let goal: Int
-    var progress: Double = 0
+    @Published var progress: Double = 0
     @Published var isComplete: Bool = false
     
     init(name: String, type: String, goal: Int) {

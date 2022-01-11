@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ProfileView: View {
     @EnvironmentObject var state: StateController
@@ -17,6 +18,16 @@ struct ProfileView: View {
                 .padding()
             Text("Current Resort: "+state.currentResort)
             Text("Days Skiing: \(state.currentUser.daysSkiing())")
+//            NavigationLink(destination: SignUpView()){
+//                Text("Log Out")
+//            }.simultaneousGesture(TapGesture().onEnded{
+//                let firebaseAuth = Auth.auth()
+//                do {
+//                  try firebaseAuth.signOut()
+//                } catch let signOutError as NSError {
+//                    print("Error signing out: %@", signOutError)
+//                }
+//            })
         }
     }
 }

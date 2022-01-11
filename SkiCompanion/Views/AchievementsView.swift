@@ -8,32 +8,29 @@ import SwiftUI
 
 struct AchievementsView: View {
     @EnvironmentObject var state: StateController
+    @ObservedObject var user: User
     var body: some View {
         VStack{
-//            Text("\(state.currentUser.achievements[0].progress)")
             List{
                 Text("INCOMPLETE")
                     .bold()
                     .font(.title)
-                ForEach(state.currentUser.achievements, id: \.id) { achievement in
-                    if !achievement.isComplete {
-                        AchievementItem(achievement: achievement)
-                    }
+                ForEach(user.achievements, id: \.id) { achievement in
+                    AchievementItem(achievement: achievement, showComplete: false)
                 }
-//                .onDelete(perform: { indexSet in
-//                    state.currentUser.achievements.remove(atOffsets: indexSet)
-//                })
+                .onDelete(perform: { indexSet in
+                    user.achievements.remove(atOffsets: indexSet)
+                })
+                Text("")
                 Text("COMPLETE")
                     .bold()
                     .font(.title)
-                ForEach(state.currentUser.achievements, id: \.id) { achievement in
-                    if achievement.isComplete{
-                        AchievementItem(achievement: achievement)
-                    }
+                ForEach(user.achievements, id: \.id) { achievement in
+                    AchievementItem(achievement: achievement, showComplete: true)
                 }
-//                .onDelete(perform: { indexSet in
-//                    state.currentUser.achievements.remove(atOffsets: indexSet)
-//                })
+                .onDelete(perform: { indexSet in
+                    user.achievements.remove(atOffsets: indexSet)
+                })
             }
         }
     }
@@ -41,6 +38,6 @@ struct AchievementsView: View {
 
 struct AchievementsView_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementsView()
+        AchievementsView(user: User(email: "", password: "", currentResort: "", achievements: []))
     }
 }

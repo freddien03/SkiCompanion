@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import Firebase
 import MapKit
 
 import CoreLocation
@@ -40,7 +40,7 @@ struct SessionView: View {
                         .padding()
                     Spacer()
                     if session.distance >= 1000{
-                        Text("\(round(session.distance/10)/100) km")
+                        Text("\(String(format: "%.2f", session.distance/1000)) km")
                     }else{
                         Text("\(Int(session.distance)) m")
                     }
@@ -123,6 +123,15 @@ struct SessionView: View {
                             currentSession = nil
                         }
                         progressTime = 0
+                        // reset location
+                        state.lastKnownLocation = CLLocation()
+                        
+                        let db = Firestore.firestore()
+                        db.collection("users").document(state.UserID).setData([
+                            "currentResort": state.currentResort,
+                            "email": state.currentUser.email,
+                            "password": state.currentUser.password], merge: true)
+                        db.collection("users").document(state.UserID).collection("Achievements")
                     })
                     .padding()
                 }

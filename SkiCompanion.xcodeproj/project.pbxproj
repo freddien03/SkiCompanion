@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		246C00CDA6A16BD255AEE046 /* Pods_SkiCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15063D6557191422F370103D /* Pods_SkiCompanion.framework */; };
 		7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E535D3826F8940E004C3B2E /* WeatherView.swift */; };
+		7E73A8A127835D6600466D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E73A8A027835D6600466D4C /* GoogleService-Info.plist */; };
 		7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30C626F337C200699485 /* SkiCompanionApp.swift */; };
 		7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CA26F337D100699485 /* Assets.xcassets */; };
 		7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EDE30CD26F337D100699485 /* Preview Assets.xcassets */; };
@@ -36,7 +37,6 @@
 		C6DD6B822754E74E00E240DB /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B812754E74E00E240DB /* WeatherAPI.swift */; };
 		C6DD6B872754E8D700E240DB /* WeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B862754E8D700E240DB /* WeatherInfo.swift */; };
 		C6DD6B8C2754ECFB00E240DB /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */; };
-		C6E390B62760DA3A00885954 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6E390B52760DA3A00885954 /* GoogleService-Info.plist */; };
 		D6E28D959058227FE8FBB8B7 /* Pods_SkiCompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +63,7 @@
 		32C20F4C5AADAFE83514E6A3 /* Pods-SkiCompanion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion.release.xcconfig"; path = "Target Support Files/Pods-SkiCompanion/Pods-SkiCompanion.release.xcconfig"; sourceTree = "<group>"; };
 		39F7AF58422AE9CE94ECC344 /* Pods-SkiCompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanionTests.release.xcconfig"; path = "Target Support Files/Pods-SkiCompanionTests/Pods-SkiCompanionTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E535D3826F8940E004C3B2E /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		7E73A8A027835D6600466D4C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EDE30C326F337C200699485 /* SkiCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkiCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EDE30C626F337C200699485 /* SkiCompanionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkiCompanionApp.swift; sourceTree = "<group>"; };
 		7EDE30CA26F337D100699485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		C6DD6B812754E74E00E240DB /* WeatherAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 		C6DD6B862754E8D700E240DB /* WeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfo.swift; sourceTree = "<group>"; };
 		C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
-		C6E390B52760DA3A00885954 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanion_SkiCompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21D5C5764A3E4905446EC97 /* Pods_SkiCompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SkiCompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60E6BF0296779F16BA0F33D /* Pods-SkiCompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanionTests.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanionTests/Pods-SkiCompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
 				7EDE30CA26F337D100699485 /* Assets.xcassets */,
 				7EDE30D426F337D100699485 /* Info.plist */,
-				C6E390B52760DA3A00885954 /* GoogleService-Info.plist */,
+				7E73A8A027835D6600466D4C /* GoogleService-Info.plist */,
 				7EDE30CC26F337D100699485 /* Preview Content */,
 			);
 			path = SkiCompanion;
@@ -362,7 +362,7 @@
 			files = (
 				7EDE30CE26F337D100699485 /* Preview Assets.xcassets in Resources */,
 				7EDE30CB26F337D100699485 /* Assets.xcassets in Resources */,
-				C6E390B62760DA3A00885954 /* GoogleService-Info.plist in Resources */,
+				7E73A8A127835D6600466D4C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,7 +672,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SkiCompanion/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NKDQR38W84;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SkiCompanion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -683,7 +683,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.freddie.SkiCompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -706,7 +706,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.freddie.SkiCompanion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
