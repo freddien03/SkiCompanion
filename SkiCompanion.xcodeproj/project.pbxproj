@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		246C00CDA6A16BD255AEE046 /* Pods_SkiCompanion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15063D6557191422F370103D /* Pods_SkiCompanion.framework */; };
 		7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E535D3826F8940E004C3B2E /* WeatherView.swift */; };
 		7E73A8A127835D6600466D4C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E73A8A027835D6600466D4C /* GoogleService-Info.plist */; };
 		7EDE30C726F337C200699485 /* SkiCompanionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30C626F337C200699485 /* SkiCompanionApp.swift */; };
@@ -108,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				246C00CDA6A16BD255AEE046 /* Pods_SkiCompanion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

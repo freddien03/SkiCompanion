@@ -36,7 +36,9 @@ class StateController: ObservableObject {
     func getWeather()  {
         weatherAPI.getWeather(currentResort, completion: { weather in
             if let weather = weather{
-                self.latestForecast = weather
+                DispatchQueue.main.async {
+                    self.latestForecast = weather
+                }
             }
         })
 
@@ -113,6 +115,7 @@ class StateController: ObservableObject {
     }
     
     func fetchUser(ID: String) {
+        if ID == "" { return }
         var userData : [String:Any] = [:]
         let db = Firestore.firestore()
         let docRef = db.collection("users").document(ID)

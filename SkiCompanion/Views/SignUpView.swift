@@ -69,12 +69,12 @@ struct SignUpView: View {
         .navigationBarBackButtonHidden(true)
         .navigationBarTitle(Text(""), displayMode: .inline)
         .navigationBarHidden(true)
-//        .onAppear(perform: {
-//            if Auth.auth().currentUser != nil {
-//                loggedIn = true
-//                state.UserID = Auth.auth().currentUser?.uid ?? ""
-//            }
-//        })
+        .onAppear(perform: {
+            if Auth.auth().currentUser != nil {
+                loggedIn = true
+                state.UserID = Auth.auth().currentUser?.uid ?? ""
+            }
+        })
     }
 }
 

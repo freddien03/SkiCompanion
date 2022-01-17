@@ -41,8 +41,10 @@ struct SessionView: View {
                     Spacer()
                     if session.distance >= 1000{
                         Text("\(String(format: "%.2f", session.distance/1000)) km")
+                            .padding()
                     }else{
                         Text("\(Int(session.distance)) m")
+                            .padding()
                     }
                 }
                 HStack{
@@ -50,12 +52,14 @@ struct SessionView: View {
                         .padding()
                     Spacer()
                     Text("\(Int(session.topSpeed)) mph")
+                        .padding()
                 }
                 HStack{
                     Text("Elevation:")
                         .padding()
                     Spacer()
                     Text("\(Int(session.elevation)) m")
+                        .padding()
                 }
             }
             

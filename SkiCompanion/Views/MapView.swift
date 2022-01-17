@@ -41,7 +41,6 @@ struct MapView: View {
                     // fetch map
                     mapLoader.loadImage(for: urlString)
                 }
-                .rotationEffect(rotate ? .degrees(90) : .degrees(0))
             Spacer()
         }
     }

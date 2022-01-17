@@ -9,9 +9,15 @@ import SwiftUI
 
 struct RootTabView: View {
     @EnvironmentObject var state: StateController
+//    @Binding var loggedOut: Bool = .constant(false)!
+    @State var loggedOut: Bool = false
     var body: some View {
+        NavigationLink(
+            destination: SignUpView(), isActive: $loggedOut, label: {
+                EmptyView()
+            })
             TabView {
-                ProfileView()
+                ProfileView(loggedOut: $loggedOut)
                     .tabItem {
                         VStack{
                             Image(systemName: "person.fill")

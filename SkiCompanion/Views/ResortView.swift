@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ResortView: View {
     @EnvironmentObject var state: StateController
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
-        Text("select resort")
+        Button("change resort") {
+            self.presentationMode.wrappedValue.dismiss()
+        }
     }
 }
 
