@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RootTabView: View {
     @EnvironmentObject var state: StateController
-//    @Binding var loggedOut: Bool = .constant(false)!
+    @Binding var loggedIn: Bool
     @State var loggedOut: Bool = false
     var body: some View {
         NavigationLink(
@@ -17,7 +17,7 @@ struct RootTabView: View {
                 EmptyView()
             })
             TabView {
-                ProfileView(loggedOut: $loggedOut)
+                ProfileView(loggedIn: $loggedIn)
                     .tabItem {
                         VStack{
                             Image(systemName: "person.fill")
@@ -60,6 +60,6 @@ struct RootTabView: View {
 
 struct RootTabView_Previews: PreviewProvider {
     static var previews: some View {
-        RootTabView()
+        RootTabView(loggedIn: .constant(false))
     }
 }

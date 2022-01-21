@@ -82,7 +82,6 @@ class StateController: ObservableObject {
                     completion(.failure(error))
                 }
             } else {
-                print(querySnapshot!.documents)
                     for document in querySnapshot!.documents {
                         AchList.append(self.achievementFromData(data: document.data()))
                     }

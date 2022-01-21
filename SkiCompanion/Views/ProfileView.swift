@@ -10,20 +10,22 @@ import Firebase
 
 struct ProfileView: View {
     @EnvironmentObject var state: StateController
-    @Binding var loggedOut: Bool
+    @Binding var loggedIn: Bool
     var body: some View {
         VStack{
+            Spacer()
             Text(state.currentUser.username() + "'s Profile")
                 .font(.title)
                 .bold()
                 .padding()
             Text("Current Resort: "+state.currentResort)
+                .padding()
             Text("Days Skiing: \(state.currentUser.daysSkiing())")
 //            NavigationLink(destination: ResortView()){
 //                Text("Change Resort")
 //            }
 //            .padding()
-            
+            Spacer()
             Button("Log Out") {
                 let firebaseAuth = Auth.auth()
                 do {
@@ -32,14 +34,16 @@ struct ProfileView: View {
                     print("Error signing out: %@", signOutError)
                 }
                 state.UserID = ""
-                loggedOut = true
+                loggedIn = false
             }
+            .padding()
+            Spacer()
         }
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(loggedOut: .constant(false))
+        ProfileView(loggedIn: .constant(false))
     }
 }

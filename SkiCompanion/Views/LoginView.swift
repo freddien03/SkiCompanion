@@ -16,7 +16,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView{
             VStack{
-                NavigationLink(destination: RootTabView(), isActive: $success) { EmptyView() }
+                NavigationLink(destination: RootTabView(loggedIn: $success), isActive: $success) { EmptyView() }
                 
                 Text("Log In")
                     .font(.system(size: 30, weight: .semibold))

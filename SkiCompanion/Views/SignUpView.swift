@@ -16,7 +16,7 @@ struct SignUpView: View {
     var body: some View {
         NavigationView{
             VStack{
-                NavigationLink(destination: RootTabView(), isActive: $loggedIn) { EmptyView() }
+                NavigationLink(destination: RootTabView(loggedIn: $loggedIn), isActive: $loggedIn) { EmptyView() }
                 
                 Text("Sign Up")
                     .font(.system(size: 30, weight: .semibold))
@@ -50,9 +50,6 @@ struct SignUpView: View {
                     }
                 }
                 .padding()
-//                NavigationLink(destination: LoginView()) {
-//                    Text("Log In")
-//                }
                 Button("Log In") {
                     Auth.auth().signIn(withEmail: username, password: password){ (result, error) in
                         if error != nil {
