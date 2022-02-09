@@ -52,7 +52,7 @@ struct RootTabView: View {
                         Text("Map")
                     }
             }
-            .navigationBarTitle(Text(""), displayMode: .inline)
+            .navigationBarTitle(Text(""))
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }

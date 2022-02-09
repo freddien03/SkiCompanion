@@ -10,6 +10,7 @@ import Firebase
 
 struct ProfileView: View {
     @EnvironmentObject var state: StateController
+    @State private var showConfirmation = false
     @Binding var loggedIn: Bool
     var body: some View {
         VStack{
@@ -26,17 +27,35 @@ struct ProfileView: View {
 //            }
 //            .padding()
             Spacer()
-            Button("Log Out") {
-                let firebaseAuth = Auth.auth()
-                do {
-                  try firebaseAuth.signOut()
-                } catch let signOutError as NSError {
-                    print("Error signing out: %@", signOutError)
+            if #available(iOS 15.0, *) {
+                Button("Log Out") {
+                    showConfirmation = true
                 }
-                state.UserID = ""
-                loggedIn = false
+                .confirmationDialog("Log Out?", isPresented: $showConfirmation, titleVisibility: .visible) {
+                    Button("Confirm") {
+                        let firebaseAuth = Auth.auth()
+                        do {
+                          try firebaseAuth.signOut()
+                        } catch let signOutError as NSError {
+                            print("Error signing out: %@", signOutError)
+                        }
+                        state.UserID = ""
+                        loggedIn = false
+                    }
+                }
+                .padding()
+            } else {
+                Button("Log Out") {
+                    let firebaseAuth = Auth.auth()
+                    do {
+                      try firebaseAuth.signOut()
+                    } catch let signOutError as NSError {
+                        print("Error signing out: %@", signOutError)
+                    }
+                    state.UserID = ""
+                    loggedIn = false
+                }
             }
-            .padding()
             Spacer()
         }
     }
