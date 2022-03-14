@@ -22,11 +22,9 @@ struct ProfileView: View {
             Text("Current Resort: "+state.currentResort)
                 .padding()
             Text("Days Skiing: \(state.currentUser.daysSkiing())")
-//            NavigationLink(destination: ResortView()){
-//                Text("Change Resort")
-//            }
-//            .padding()
             Spacer()
+//            confirm logout if confirmation box available
+//            (>IOS 15.0 for confirmation, but logout still works for rest
             if #available(iOS 15.0, *) {
                 Button("Log Out") {
                     showConfirmation = true

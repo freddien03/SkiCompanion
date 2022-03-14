@@ -8,6 +8,7 @@
 import Foundation
 
 extension Achievement: Equatable {
+//    allow achievements to be compared
     static func == (lhs: Achievement, rhs: Achievement) -> Bool {
         return lhs.isComplete == rhs.isComplete || lhs.goal == rhs.goal || lhs.name == rhs.name || lhs.progress == rhs.progress || lhs.type == rhs.type
     }

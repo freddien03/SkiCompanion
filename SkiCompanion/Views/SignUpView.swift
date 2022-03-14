@@ -16,6 +16,7 @@ struct SignUpView: View {
     var body: some View {
         NavigationView{
             VStack{
+//                redirect to main view if logged in
                 NavigationLink(destination: RootTabView(loggedIn: $loggedIn), isActive: $loggedIn) { EmptyView() }
                 
                 Text("Sign Up")
@@ -32,6 +33,7 @@ struct SignUpView: View {
                     SecureField("Password", text: $password)
                 }
                 Button("Create Account"){
+//                    create user with entered statistics and template achievements
                     Auth.auth().createUser(withEmail: username, password: password) { (result, error) in
                         if let error = error{
                             print(error.localizedDescription)
@@ -67,6 +69,7 @@ struct SignUpView: View {
         .navigationBarTitle(Text(""), displayMode: .inline)
         .navigationBarHidden(true)
         .onAppear(perform: {
+//            auto login
             if Auth.auth().currentUser != nil {
                 loggedIn = true
                 state.UserID = Auth.auth().currentUser?.uid ?? ""

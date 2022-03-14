@@ -17,8 +17,10 @@ struct WeatherView: View {
                     .bold()
                     .padding()
                 HStack{
+//                    description
                     Text(forecast.midStats.desc)
                         .padding()
+//                    icon
                     Image(String(forecast.midStats.image.prefix(forecast.midStats.image.count - 4)))
                         .resizable()
                         .aspectRatio(contentMode: .fit)

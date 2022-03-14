@@ -16,13 +16,10 @@
 		7EDE30E926F337D200699485 /* SkiCompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30E826F337D200699485 /* SkiCompanionUITests.swift */; };
 		7EDE30FD26F4D51C00699485 /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE30FC26F4D51C00699485 /* RootTabView.swift */; };
 		7EDE310226F4D5FB00699485 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310126F4D5FB00699485 /* SessionView.swift */; };
-		7EDE310726F4D64A00699485 /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310626F4D64A00699485 /* ResortView.swift */; };
 		7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE310B26F4D68500699485 /* SignUpView.swift */; };
 		7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE312226F4DC3800699485 /* ProfileView.swift */; };
 		9FAB3DDEF554753F35C66595 /* Pods_SkiCompanion_SkiCompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF165A6CE4A7C72F29B9C126 /* Pods_SkiCompanion_SkiCompanionUITests.framework */; };
-		C6352D0B26FC715E004336E1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D0A26FC715E004336E1 /* View.swift */; };
 		C6352D1326FC739E004336E1 /* AchievementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6352D1226FC739E004336E1 /* AchievementsView.swift */; };
-		C642C6D527074A2400282D7D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C642C6D427074A2400282D7D /* LoginView.swift */; };
 		C6487642276751CA0015507D /* AchievementItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6487641276751CA0015507D /* AchievementItem.swift */; };
 		C66915222705A6B1003FD294 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915212705A6B1003FD294 /* Achievement.swift */; };
 		C66915272705A79A003FD294 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C66915262705A79A003FD294 /* Session.swift */; };
@@ -76,13 +73,10 @@
 		7EDE30EA26F337D200699485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EDE30FC26F4D51C00699485 /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		7EDE310126F4D5FB00699485 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
-		7EDE310626F4D64A00699485 /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 		7EDE310B26F4D68500699485 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		7EDE312226F4DC3800699485 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		A5A9427313892C33A447644E /* Pods-SkiCompanion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkiCompanion.debug.xcconfig"; path = "Target Support Files/Pods-SkiCompanion/Pods-SkiCompanion.debug.xcconfig"; sourceTree = "<group>"; };
-		C6352D0A26FC715E004336E1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		C6352D1226FC739E004336E1 /* AchievementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsView.swift; sourceTree = "<group>"; };
-		C642C6D427074A2400282D7D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C6487641276751CA0015507D /* AchievementItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementItem.swift; sourceTree = "<group>"; };
 		C66915212705A6B1003FD294 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		C66915262705A79A003FD294 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -139,6 +133,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7E457E3527DE937400EF5EFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C66915262705A79A003FD294 /* Session.swift */,
+				C6ABBC6F275149BA0030518B /* MapLoader.swift */,
+				C6DD6B862754E8D700E240DB /* WeatherInfo.swift */,
+				C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */,
+				C6DD6B812754E74E00E240DB /* WeatherAPI.swift */,
+				C669152B2705A8D1003FD294 /* User.swift */,
+				C66915212705A6B1003FD294 /* Achievement.swift */,
+				C66915352705AB32003FD294 /* LocationHandler.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7EDE30BA26F337C200699485 = {
 			isa = PBXGroup;
 			children = (
@@ -166,16 +175,9 @@
 			children = (
 				C6352D0926FC7147004336E1 /* Extensions */,
 				7EDE311026F4D69E00699485 /* Views */,
-				C66915302705AA6C003FD294 /* StateController.swift */,
-				C66915262705A79A003FD294 /* Session.swift */,
-				C6ABBC6F275149BA0030518B /* MapLoader.swift */,
-				C66915352705AB32003FD294 /* LocationHandler.swift */,
-				C6DD6B862754E8D700E240DB /* WeatherInfo.swift */,
-				C6DD6B8B2754ECFB00E240DB /* WeatherResponse.swift */,
-				C6DD6B812754E74E00E240DB /* WeatherAPI.swift */,
-				C669152B2705A8D1003FD294 /* User.swift */,
-				C66915212705A6B1003FD294 /* Achievement.swift */,
+				7E457E3527DE937400EF5EFF /* Models */,
 				7EDE30C626F337C200699485 /* SkiCompanionApp.swift */,
+				C66915302705AA6C003FD294 /* StateController.swift */,
 				7EDE30CA26F337D100699485 /* Assets.xcassets */,
 				7EDE30D426F337D100699485 /* Info.plist */,
 				7E73A8A027835D6600466D4C /* GoogleService-Info.plist */,
@@ -213,16 +215,14 @@
 		7EDE311026F4D69E00699485 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7EDE310126F4D5FB00699485 /* SessionView.swift */,
-				C642C6D427074A2400282D7D /* LoginView.swift */,
-				7E535D3826F8940E004C3B2E /* WeatherView.swift */,
-				7EDE312226F4DC3800699485 /* ProfileView.swift */,
-				7EDE310626F4D64A00699485 /* ResortView.swift */,
-				C6ABBC6A275149710030518B /* MapView.swift */,
 				7EDE310B26F4D68500699485 /* SignUpView.swift */,
 				7EDE30FC26F4D51C00699485 /* RootTabView.swift */,
+				7EDE312226F4DC3800699485 /* ProfileView.swift */,
 				C6352D1226FC739E004336E1 /* AchievementsView.swift */,
 				C6487641276751CA0015507D /* AchievementItem.swift */,
+				7EDE310126F4D5FB00699485 /* SessionView.swift */,
+				7E535D3826F8940E004C3B2E /* WeatherView.swift */,
+				C6ABBC6A275149710030518B /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,7 +243,6 @@
 		C6352D0926FC7147004336E1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C6352D0A26FC715E004336E1 /* View.swift */,
 				C6D09590275A815F00122536 /* UserExt.swift */,
 				C6D09595275A82C200122536 /* AchievementsExt.swift */,
 			);
@@ -490,7 +489,6 @@
 			files = (
 				7EDE312326F4DC3800699485 /* ProfileView.swift in Sources */,
 				C6487642276751CA0015507D /* AchievementItem.swift in Sources */,
-				C6352D0B26FC715E004336E1 /* View.swift in Sources */,
 				7EDE310226F4D5FB00699485 /* SessionView.swift in Sources */,
 				C66915312705AA6C003FD294 /* StateController.swift in Sources */,
 				7EDE30FD26F4D51C00699485 /* RootTabView.swift in Sources */,
@@ -503,8 +501,6 @@
 				C6D09591275A815F00122536 /* UserExt.swift in Sources */,
 				C6ABBC6B275149710030518B /* MapView.swift in Sources */,
 				C6DD6B8C2754ECFB00E240DB /* WeatherResponse.swift in Sources */,
-				7EDE310726F4D64A00699485 /* ResortView.swift in Sources */,
-				C642C6D527074A2400282D7D /* LoginView.swift in Sources */,
 				C66915272705A79A003FD294 /* Session.swift in Sources */,
 				7EDE310C26F4D68500699485 /* SignUpView.swift in Sources */,
 				7E535D3926F8940E004C3B2E /* WeatherView.swift in Sources */,

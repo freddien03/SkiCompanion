@@ -59,6 +59,7 @@ class Session: ObservableObject {
     func updateElevation(){
         var limits = [Double.greatestFiniteMagnitude, Double.zero]
         if self.locations.count >= 2{
+//            finds highest and lowest altiude in locations
             for location in self.locations{
                 if location.altitude < limits[0] {
                     limits[0] = location.altitude
@@ -67,6 +68,7 @@ class Session: ObservableObject {
                     limits[1] = location.altitude
                 }
             }
+//            returns difference of largest and smallest
             self.elevation = limits[1] - limits[0]
         }
     }

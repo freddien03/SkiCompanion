@@ -33,6 +33,6 @@ class LocationHandler: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        stateController?.lastKnownLocation = CLLocation()
+        stateController?.lastKnownLocation = CLLocation(latitude: 0, longitude: 0)
     }
 }

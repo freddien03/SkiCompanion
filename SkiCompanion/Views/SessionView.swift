@@ -18,6 +18,7 @@ struct SessionView: View {
     @State private var progressTime = 0
     @State private var isRunning = false
     @State private var mapCoord: MKCoordinateRegion = MKCoordinateRegion()
+//    update time based on time progressed
     var hours: Int {
         progressTime/3600
     }
@@ -34,6 +35,7 @@ struct SessionView: View {
                 .font(.system(size: 50))
                 .bold()
                 .padding()
+//            display session statistics if there is a session
             if let session = currentSession {
                 HStack{
                     Text("Distance:")
@@ -64,17 +66,19 @@ struct SessionView: View {
             }
             
             HStack{
+//                start button
                 Button(action: {
+//                    create timer, request and update location every second
+                    state.locationRecieved = false
                     state.getLocation()
                     timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
                         progressTime += 1
-                        if progressTime%3 == 0{
-                            state.getLocation()
-                            if let currentSession = currentSession{
-                                if state.lastKnownLocation != CLLocation() {
-                                    currentSession.locations.append(state.lastKnownLocation)
-                                    mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
-                                }
+                        if let currentSession = currentSession{
+                            if state.lastKnownLocation != CLLocation(latitude: 0, longitude: 0) && state.locationRecieved {
+                                state.locationRecieved = false
+                                state.getLocation()
+                                currentSession.locations.append(state.lastKnownLocation)
+                                mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
                             }
                         }
                     })
@@ -86,21 +90,23 @@ struct SessionView: View {
                         Text("Start")
                     }
                 }
-                
+//                pause/resume button
                 if isSession{
                     Button(action: {
                         if isRunning{
                             timer?.invalidate()
                         }else{
+//                    create timer, request and update location every second
+                            state.locationRecieved = false
                             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
                                 progressTime += 1
-                                if progressTime%3 == 0{
-                                    state.getLocation()
-                                    if let currentSession = currentSession{
-                                        if state.lastKnownLocation != CLLocation() {
-                                            currentSession.locations.append(state.lastKnownLocation)
-                                            mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
-                                        }
+                                state.getLocation()
+                                if let currentSession = currentSession{
+                                    if state.lastKnownLocation != CLLocation(latitude: 0, longitude: 0) && state.locationRecieved {
+                                        state.locationRecieved = false
+                                        state.getLocation()
+                                        currentSession.locations.append(state.lastKnownLocation)
+                                        mapCoord = MKCoordinateRegion(center: currentSession.locations[currentSession.locations.count-1].coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
                                     }
                                 }
                             })
@@ -116,6 +122,7 @@ struct SessionView: View {
                     .padding()
                 }
                 
+//                stop button
                 if isSession {
                     Button("Stop", action: {
                         timer?.invalidate()
@@ -128,7 +135,7 @@ struct SessionView: View {
                         }
                         progressTime = 0
                         // reset location
-                        state.lastKnownLocation = CLLocation()
+                        state.lastKnownLocation = CLLocation(latitude: 0, longitude: 0)
                         
                         let db = Firestore.firestore()
                         db.collection("users").document(state.UserID).setData([
@@ -142,6 +149,7 @@ struct SessionView: View {
             }
             .padding()
             
+//            display map if there is a session
             if let session = currentSession {
                 if session.locations.count != 0{
                     Map(coordinateRegion: $mapCoord, showsUserLocation: true)

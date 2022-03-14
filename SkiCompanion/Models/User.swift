@@ -49,15 +49,8 @@ class User: ObservableObject {
         return String(emailList[0])
     }
     
-    func authenticate(email: String, pass: String) -> Bool{
-        if email == self.email && pass == self.password {
-            return true
-        }else{
-            return false
-        }
-    }
-    
     func daysSkiing() -> Int{
+        // find num of days between first and last session
         let calendar = Calendar(identifier: .gregorian)
         if self.sessions.count != 0{
             let fromDate = calendar.startOfDay(for: sessions[0].date)

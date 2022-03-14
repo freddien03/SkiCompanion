@@ -15,6 +15,7 @@ struct AchievementsView: View {
                 Text("INCOMPLETE")
                     .bold()
                     .font(.title)
+//                display all incomplete achievements
                 ForEach(user.achievements, id: \.id) { achievement in
                     AchievementItem(achievement: achievement, showComplete: false)
                 }
@@ -25,6 +26,7 @@ struct AchievementsView: View {
                 Text("COMPLETE")
                     .bold()
                     .font(.title)
+//                display all complete achievements
                 ForEach(user.achievements, id: \.id) { achievement in
                     AchievementItem(achievement: achievement, showComplete: true)
                 }
